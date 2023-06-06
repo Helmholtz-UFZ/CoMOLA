@@ -1,0 +1,488 @@
+23-05-2023 13:52:29 | Delete the helping folders ...
+23-05-2023 13:52:29 | Done.
+23-05-2023 13:52:29 | Selected algorithm: NSGA2
+23-05-2023 13:52:29 | Generate start individual based on an ASCII map...
+23-05-2023 13:52:29 | Read ascii file ...
+23-05-2023 13:52:29 | Read transition matrix...
+23-05-2023 13:52:29 | Determine static elements of the transition matrix ...
+23-05-2023 13:52:29 | possible_elements per land use: 
+23-05-2023 13:52:29 | land use, elements: 1,[1 2 3 4 5 6 7]
+23-05-2023 13:52:29 | land use, elements: 2,[1 2 3 4 5 6 7]
+23-05-2023 13:52:29 | land use, elements: 3,[1 2 3 4 5 6 7]
+23-05-2023 13:52:29 | land use, elements: 4,[1 2 3 4 5 6 7]
+23-05-2023 13:52:29 | land use, elements: 5,[1 2 3 4 5 6 7]
+23-05-2023 13:52:29 | land use, elements: 6,[6 7]
+23-05-2023 13:52:29 | land use, elements: 7,[7]
+23-05-2023 13:52:29 | Cluster cells of the original map into patches ...
+23-05-2023 13:52:29 | Runtime for the generation of the patch_ID_map: 0 seconds.
+23-05-2023 13:52:29 | start individual of the input data with length 39: [2, 6, 1, 2, 3, 4, 4, 5, 3, 6, 7, 2, 4, 5, 5, 6, 1, 7, 2, 5, 4, 3, 1, 4, 6, 1, 5, 2, 7, 5, 6, 3, 4, 2, 3, 6, 7, 2, 1]
+23-05-2023 13:52:29 | DiscreteBounder values: [1, 2, 3, 4, 5, 6, 7]
+23-05-2023 13:52:29 | map proportion of the patches: [8.0, 1.0, 4.0, 5.0, 2.0, 1.0, 2.0, 2.0, 2.0, 3.0, 1.0, 1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 4.0, 4.0, 1.0, 1.0, 2.0, 4.0, 1.0, 1.0, 2.0, 4.0, 3.0, 3.0, 3.0, 2.0, 4.0, 3.0, 2.0, 3.0, 3.0, 1.0, 2.0, 2.0, 3.0]
+23-05-2023 13:52:29 | Selector of the optimization algorithm changed to: constrained_tournament_selection
+23-05-2023 13:52:29 | Read min/max limits ...
+23-05-2023 13:52:29 | min_max_diff: [[  1   2   3   4   5   6   7   8]
+ [  0   0   0   0   0  10  10   0]
+ [100 100 100 100 100  25  30 100]]
+23-05-2023 13:52:29 | Generator candidates are: 
+23-05-2023 13:52:29 | start_land_cover: {1: [array([ 2, 16, 22, 25, 38], dtype=int64), 17.0], 2: [array([ 0,  3, 11, 18, 27, 33, 37], dtype=int64), 14.0], 3: [array([ 4,  8, 21, 31, 34], dtype=int64), 14.0], 4: [array([ 5,  6, 12, 20, 23, 32], dtype=int64), 11.0], 5: [array([ 7, 13, 14, 19, 26, 29], dtype=int64), 12.0], 6: [array([ 1,  9, 15, 24, 30, 35], dtype=int64), 14.0], 7: [array([10, 17, 28, 36], dtype=int64), 10.0]}
+23-05-2023 13:52:29 | create individual with create_extreme_seed based on total area constraints and transition matrix if given
+23-05-2023 13:52:29 | The generation of a new candidate needed 0 seconds.
+23-05-2023 13:52:29 | create individual with create_extreme_seed based on total area constraints and transition matrix if given
+23-05-2023 13:52:29 | The generation of a new candidate needed 0 seconds.
+23-05-2023 13:52:29 | create individual with create_extreme_seed based on total area constraints and transition matrix if given
+23-05-2023 13:52:29 | The generation of a new candidate needed 0 seconds.
+23-05-2023 13:52:29 | create individual with create_extreme_seed based on total area constraints and transition matrix if given
+23-05-2023 13:52:29 | The generation of a new candidate needed 0 seconds.
+23-05-2023 13:52:29 | create individual with create_extreme_seed based on total area constraints and transition matrix if given
+23-05-2023 13:52:29 | The generation of a new candidate needed 0 seconds.
+23-05-2023 13:52:29 | create individual with create_extreme_seed based on total area constraints and transition matrix if given
+23-05-2023 13:52:29 | The generation of a new candidate needed 0 seconds.
+23-05-2023 13:52:29 | create individual with create_extreme_seed based on total area constraints and transition matrix if given
+23-05-2023 13:52:29 | The generation of a new candidate needed 0 seconds.
+23-05-2023 13:52:29 | create individual with create_extreme_seed based on total area constraints and transition matrix if given
+23-05-2023 13:52:29 | The generation of a new candidate needed 0 seconds.
+23-05-2023 13:52:29 | create individual with create_extreme_seed based on total area constraints and transition matrix if given
+23-05-2023 13:52:29 | The generation of a new candidate needed 0 seconds.
+23-05-2023 13:52:29 | Population for generation 1: 
+23-05-2023 13:52:30 | 1, [2, 6, 1, 2, 3, 4, 4, 5, 3, 6, 7, 2, 4, 5, 5, 6, 1, 7, 2, 5, 4, 3, 1, 4, 6, 1, 5, 2, 7, 5, 6, 3, 4, 2, 3, 6, 7, 2, 1]
+23-05-2023 13:52:30 | 2, [2, 6, 2, 2, 3, 4, 4, 5, 3, 6, 7, 2, 4, 5, 5, 6, 2, 7, 2, 5, 4, 3, 2, 4, 6, 2, 5, 2, 7, 5, 6, 3, 4, 2, 3, 6, 7, 2, 2]
+23-05-2023 13:52:30 | 3, [1, 6, 1, 1, 1, 1, 1, 1, 1, 6, 7, 1, 1, 1, 1, 6, 1, 7, 1, 1, 1, 1, 1, 1, 6, 1, 1, 1, 7, 1, 6, 1, 1, 1, 1, 6, 7, 1, 1]
+23-05-2023 13:52:30 | 4, [1, 6, 1, 1, 3, 4, 4, 5, 3, 6, 7, 1, 4, 5, 5, 6, 1, 7, 1, 5, 4, 3, 1, 4, 6, 1, 5, 1, 7, 5, 6, 3, 4, 1, 3, 6, 7, 1, 1]
+23-05-2023 13:52:30 | 5, [2, 6, 2, 2, 2, 2, 2, 2, 2, 6, 7, 2, 2, 2, 2, 6, 2, 7, 2, 2, 2, 2, 2, 2, 6, 2, 2, 2, 7, 2, 6, 2, 2, 2, 2, 6, 7, 2, 2]
+23-05-2023 13:52:30 | 6, [2, 6, 1, 2, 1, 4, 4, 5, 1, 6, 7, 2, 4, 5, 5, 6, 1, 7, 2, 5, 4, 1, 1, 4, 6, 1, 5, 2, 7, 5, 6, 1, 4, 2, 1, 6, 7, 2, 1]
+23-05-2023 13:52:30 | 7, [3, 6, 3, 3, 3, 3, 3, 3, 3, 6, 7, 3, 3, 3, 3, 6, 3, 7, 3, 3, 3, 3, 3, 3, 6, 3, 3, 3, 7, 3, 6, 3, 3, 3, 3, 6, 7, 3, 3]
+23-05-2023 13:52:30 | 8, [2, 6, 1, 2, 3, 1, 1, 5, 3, 6, 7, 2, 1, 5, 5, 6, 1, 7, 2, 5, 1, 3, 1, 1, 6, 1, 5, 2, 7, 5, 6, 3, 1, 2, 3, 6, 7, 2, 1]
+23-05-2023 13:52:30 | 9, [4, 6, 4, 4, 4, 4, 4, 4, 4, 6, 7, 4, 4, 4, 4, 6, 4, 7, 4, 4, 4, 4, 4, 4, 6, 4, 4, 4, 7, 4, 6, 4, 4, 4, 4, 6, 7, 4, 4]
+23-05-2023 13:52:30 | 10, [2, 6, 1, 2, 3, 4, 4, 1, 3, 6, 7, 2, 4, 1, 1, 6, 1, 7, 2, 1, 4, 3, 1, 4, 6, 1, 1, 2, 7, 1, 6, 3, 4, 2, 3, 6, 7, 2, 1]
+23-05-2023 13:52:30 | Create the helping folder ...
+23-05-2023 13:52:30 | Done.
+23-05-2023 13:52:30 | Create the helping folder ...
+23-05-2023 13:52:30 | Done.
+23-05-2023 13:52:30 | Create the helping folder ...
+23-05-2023 13:52:30 | Done.
+23-05-2023 13:52:30 | Create the helping folder ...
+23-05-2023 13:52:30 | Done.
+23-05-2023 13:52:30 | Create the helping folder ...
+23-05-2023 13:52:30 | Done.
+23-05-2023 13:52:30 | Create the helping folder ...
+23-05-2023 13:52:30 | Done.
+23-05-2023 13:52:30 | Create the helping folder ...
+23-05-2023 13:52:30 | Done.
+23-05-2023 13:52:30 | Create the helping folder ...
+23-05-2023 13:52:30 | Done.
+23-05-2023 13:52:30 | Create the helping folder ...
+23-05-2023 13:52:30 | Done.
+23-05-2023 13:52:31 | Update genome in models folder 1
+23-05-2023 13:52:31 | Update genome in models folder 2
+23-05-2023 13:52:35 | Update genome in models folder 3
+23-05-2023 13:52:35 | Update genome in models folder 4
+23-05-2023 13:52:38 | Update genome in models folder 5
+23-05-2023 13:52:38 | Update genome in models folder 6
+23-05-2023 13:52:42 | Update genome in models folder 7
+23-05-2023 13:52:42 | Update genome in models folder 8
+23-05-2023 13:52:46 | Update genome in models folder 9
+23-05-2023 13:52:46 | Update genome in models folder 10
+23-05-2023 13:52:31 | Evaluation of individual 1
+23-05-2023 13:52:31 | Run external models ...
+23-05-2023 13:52:35 | Done.
+23-05-2023 13:52:46 | Evaluation of individual 10
+23-05-2023 13:52:46 | Run external models ...
+23-05-2023 13:52:50 | Done.
+23-05-2023 13:52:48 | Start model C:\Users\steffenv\CoMOLA\models_9\HabStruct\HabStruct.R
+23-05-2023 13:52:49 | The model C:\Users\steffenv\CoMOLA\models_9\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:52:48 | Start model C:\Users\steffenv\CoMOLA\models_9\SYM\SYM.R
+23-05-2023 13:52:49 | The model C:\Users\steffenv\CoMOLA\models_9\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:52:48 | Start model C:\Users\steffenv\CoMOLA\models_9\WYLD\WYLD.R
+23-05-2023 13:52:49 | The model C:\Users\steffenv\CoMOLA\models_9\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:52:48 | Start model C:\Users\steffenv\CoMOLA\models_9\SAR\SAR.R
+23-05-2023 13:52:49 | The model C:\Users\steffenv\CoMOLA\models_9\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:52:33 | Start model C:\Users\steffenv\CoMOLA\models\HabStruct\HabStruct.R
+23-05-2023 13:52:33 | The model C:\Users\steffenv\CoMOLA\models\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:52:33 | Start model C:\Users\steffenv\CoMOLA\models\SYM\SYM.R
+23-05-2023 13:52:33 | The model C:\Users\steffenv\CoMOLA\models\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:52:33 | Start model C:\Users\steffenv\CoMOLA\models\WYLD\WYLD.R
+23-05-2023 13:52:33 | The model C:\Users\steffenv\CoMOLA\models\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:52:33 | Start model C:\Users\steffenv\CoMOLA\models\SAR\SAR.R
+23-05-2023 13:52:33 | The model C:\Users\steffenv\CoMOLA\models\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:52:31 | Evaluation of individual 2
+23-05-2023 13:52:31 | Run external models ...
+23-05-2023 13:52:35 | Done.
+23-05-2023 13:52:33 | Start model C:\Users\steffenv\CoMOLA\models_1\HabStruct\HabStruct.R
+23-05-2023 13:52:33 | The model C:\Users\steffenv\CoMOLA\models_1\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:52:33 | Start model C:\Users\steffenv\CoMOLA\models_1\SYM\SYM.R
+23-05-2023 13:52:33 | The model C:\Users\steffenv\CoMOLA\models_1\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:52:33 | Start model C:\Users\steffenv\CoMOLA\models_1\WYLD\WYLD.R
+23-05-2023 13:52:33 | The model C:\Users\steffenv\CoMOLA\models_1\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:52:33 | Start model C:\Users\steffenv\CoMOLA\models_1\SAR\SAR.R
+23-05-2023 13:52:33 | The model C:\Users\steffenv\CoMOLA\models_1\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:52:35 | Evaluation of individual 3
+23-05-2023 13:52:35 | Run external models ...
+23-05-2023 13:52:38 | Done.
+23-05-2023 13:52:36 | Start model C:\Users\steffenv\CoMOLA\models_2\HabStruct\HabStruct.R
+23-05-2023 13:52:37 | The model C:\Users\steffenv\CoMOLA\models_2\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:52:36 | Start model C:\Users\steffenv\CoMOLA\models_2\SYM\SYM.R
+23-05-2023 13:52:37 | The model C:\Users\steffenv\CoMOLA\models_2\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:52:36 | Start model C:\Users\steffenv\CoMOLA\models_2\WYLD\WYLD.R
+23-05-2023 13:52:37 | The model C:\Users\steffenv\CoMOLA\models_2\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:52:36 | Start model C:\Users\steffenv\CoMOLA\models_2\SAR\SAR.R
+23-05-2023 13:52:37 | The model C:\Users\steffenv\CoMOLA\models_2\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:52:35 | Evaluation of individual 4
+23-05-2023 13:52:35 | Run external models ...
+23-05-2023 13:52:38 | Done.
+23-05-2023 13:52:36 | Start model C:\Users\steffenv\CoMOLA\models_3\HabStruct\HabStruct.R
+23-05-2023 13:52:37 | The model C:\Users\steffenv\CoMOLA\models_3\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:52:36 | Start model C:\Users\steffenv\CoMOLA\models_3\SYM\SYM.R
+23-05-2023 13:52:37 | The model C:\Users\steffenv\CoMOLA\models_3\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:52:36 | Start model C:\Users\steffenv\CoMOLA\models_3\WYLD\WYLD.R
+23-05-2023 13:52:37 | The model C:\Users\steffenv\CoMOLA\models_3\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:52:36 | Start model C:\Users\steffenv\CoMOLA\models_3\SAR\SAR.R
+23-05-2023 13:52:37 | The model C:\Users\steffenv\CoMOLA\models_3\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:52:38 | Evaluation of individual 5
+23-05-2023 13:52:38 | Run external models ...
+23-05-2023 13:52:42 | Done.
+23-05-2023 13:52:40 | Start model C:\Users\steffenv\CoMOLA\models_4\HabStruct\HabStruct.R
+23-05-2023 13:52:41 | The model C:\Users\steffenv\CoMOLA\models_4\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:52:40 | Start model C:\Users\steffenv\CoMOLA\models_4\SYM\SYM.R
+23-05-2023 13:52:41 | The model C:\Users\steffenv\CoMOLA\models_4\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:52:40 | Start model C:\Users\steffenv\CoMOLA\models_4\WYLD\WYLD.R
+23-05-2023 13:52:41 | The model C:\Users\steffenv\CoMOLA\models_4\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:52:40 | Start model C:\Users\steffenv\CoMOLA\models_4\SAR\SAR.R
+23-05-2023 13:52:41 | The model C:\Users\steffenv\CoMOLA\models_4\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:52:38 | Evaluation of individual 6
+23-05-2023 13:52:38 | Run external models ...
+23-05-2023 13:52:42 | Done.
+23-05-2023 13:52:40 | Start model C:\Users\steffenv\CoMOLA\models_5\HabStruct\HabStruct.R
+23-05-2023 13:52:41 | The model C:\Users\steffenv\CoMOLA\models_5\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:52:40 | Start model C:\Users\steffenv\CoMOLA\models_5\SYM\SYM.R
+23-05-2023 13:52:41 | The model C:\Users\steffenv\CoMOLA\models_5\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:52:40 | Start model C:\Users\steffenv\CoMOLA\models_5\WYLD\WYLD.R
+23-05-2023 13:52:41 | The model C:\Users\steffenv\CoMOLA\models_5\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:52:40 | Start model C:\Users\steffenv\CoMOLA\models_5\SAR\SAR.R
+23-05-2023 13:52:41 | The model C:\Users\steffenv\CoMOLA\models_5\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:52:42 | Evaluation of individual 7
+23-05-2023 13:52:42 | Run external models ...
+23-05-2023 13:52:46 | Done.
+23-05-2023 13:52:44 | Start model C:\Users\steffenv\CoMOLA\models_6\HabStruct\HabStruct.R
+23-05-2023 13:52:45 | The model C:\Users\steffenv\CoMOLA\models_6\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:52:44 | Start model C:\Users\steffenv\CoMOLA\models_6\SYM\SYM.R
+23-05-2023 13:52:45 | The model C:\Users\steffenv\CoMOLA\models_6\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:52:44 | Start model C:\Users\steffenv\CoMOLA\models_6\WYLD\WYLD.R
+23-05-2023 13:52:45 | The model C:\Users\steffenv\CoMOLA\models_6\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:52:44 | Start model C:\Users\steffenv\CoMOLA\models_6\SAR\SAR.R
+23-05-2023 13:52:45 | The model C:\Users\steffenv\CoMOLA\models_6\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:52:42 | Evaluation of individual 8
+23-05-2023 13:52:42 | Run external models ...
+23-05-2023 13:52:46 | Done.
+23-05-2023 13:52:44 | Start model C:\Users\steffenv\CoMOLA\models_7\HabStruct\HabStruct.R
+23-05-2023 13:52:45 | The model C:\Users\steffenv\CoMOLA\models_7\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:52:44 | Start model C:\Users\steffenv\CoMOLA\models_7\SYM\SYM.R
+23-05-2023 13:52:45 | The model C:\Users\steffenv\CoMOLA\models_7\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:52:44 | Start model C:\Users\steffenv\CoMOLA\models_7\WYLD\WYLD.R
+23-05-2023 13:52:45 | The model C:\Users\steffenv\CoMOLA\models_7\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:52:44 | Start model C:\Users\steffenv\CoMOLA\models_7\SAR\SAR.R
+23-05-2023 13:52:45 | The model C:\Users\steffenv\CoMOLA\models_7\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:52:46 | Evaluation of individual 9
+23-05-2023 13:52:46 | Run external models ...
+23-05-2023 13:52:50 | Done.
+23-05-2023 13:52:48 | Start model C:\Users\steffenv\CoMOLA\models_8\HabStruct\HabStruct.R
+23-05-2023 13:52:49 | The model C:\Users\steffenv\CoMOLA\models_8\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:52:48 | Start model C:\Users\steffenv\CoMOLA\models_8\SYM\SYM.R
+23-05-2023 13:52:49 | The model C:\Users\steffenv\CoMOLA\models_8\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:52:48 | Start model C:\Users\steffenv\CoMOLA\models_8\WYLD\WYLD.R
+23-05-2023 13:52:49 | The model C:\Users\steffenv\CoMOLA\models_8\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:52:48 | Start model C:\Users\steffenv\CoMOLA\models_8\SAR\SAR.R
+23-05-2023 13:52:49 | The model C:\Users\steffenv\CoMOLA\models_8\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:52:51 | not_accepted_ind []
+23-05-2023 13:52:51 | infeasible_ind: []
+23-05-2023 13:52:51 | Fitness values are: [[23.8666666666667, 7.92446596230557, 89.6719053936486, 95.3981805692332], [20.8666666666667, 7.92446596230557, 101.455407463168, 94.8876700587227], [46.0, 7.92446596230557, 30.0247799029278, 98.9108187134503], [31.3666666666667, 7.92446596230557, 79.9678448658094, 95.8186009896536], [25.5, 7.92446596230557, 77.1587881810041, 96.8687766714083], [29.2, 7.92446596230557, 74.2913333522951, 96.2168940195256], [18.6666666666667, 7.92446596230557, 104.730415532359, 94.9342105263158], [28.3666666666667, 7.92446596230557, 74.4226674213298, 96.3383515094041], [15.25, 7.92446596230557, 124.29279645908, 93.0988529014845], [28.6666666666667, 7.92446596230557, 70.3586504444394, 96.7315139025665]] 
+
+23-05-2023 13:52:51 | Population for generation 2: 
+23-05-2023 13:52:51 | 1, [3, 6, 3, 3, 3, 3, 3, 3, 3, 6, 7, 3, 3, 3, 3, 6, 3, 7, 3, 3, 3, 3, 3, 3, 6, 3, 5, 2, 7, 5, 6, 3, 1, 2, 3, 6, 7, 2, 1]
+23-05-2023 13:52:51 | 2, [2, 6, 1, 2, 3, 1, 1, 5, 3, 6, 7, 2, 1, 5, 5, 6, 1, 7, 2, 5, 1, 3, 1, 1, 6, 1, 3, 3, 7, 3, 6, 3, 3, 3, 3, 6, 7, 3, 3]
+23-05-2023 13:52:51 | 3, [1, 6, 1, 1, 3, 4, 4, 5, 3, 6, 7, 2, 4, 5, 5, 6, 2, 7, 2, 5, 4, 3, 2, 4, 6, 2, 5, 2, 7, 5, 6, 3, 4, 2, 3, 6, 7, 2, 2]
+23-05-2023 13:52:51 | 4, [2, 6, 2, 2, 3, 4, 4, 5, 3, 6, 7, 1, 4, 5, 5, 6, 1, 7, 1, 5, 4, 3, 1, 4, 6, 1, 5, 1, 7, 5, 6, 3, 4, 1, 3, 6, 7, 1, 1]
+23-05-2023 13:52:51 | 5, [2, 6, 2, 2, 2, 2, 2, 2, 2, 6, 7, 2, 2, 2, 2, 6, 2, 7, 2, 5, 4, 3, 2, 4, 6, 2, 5, 2, 7, 5, 6, 3, 4, 2, 3, 6, 7, 2, 2]
+23-05-2023 13:52:51 | 6, [2, 6, 2, 2, 3, 4, 4, 5, 3, 6, 7, 2, 4, 5, 5, 6, 2, 7, 2, 2, 2, 2, 2, 2, 6, 2, 2, 2, 7, 2, 6, 2, 2, 2, 2, 6, 7, 2, 2]
+23-05-2023 13:52:51 | 7, [2, 6, 1, 2, 3, 1, 1, 5, 3, 6, 7, 2, 1, 5, 5, 6, 1, 7, 2, 5, 1, 3, 1, 1, 6, 1, 5, 2, 7, 5, 6, 3, 1, 2, 1, 6, 7, 2, 1]
+23-05-2023 13:52:51 | 8, [2, 6, 1, 2, 1, 4, 4, 5, 1, 6, 7, 2, 4, 5, 5, 6, 1, 7, 2, 5, 4, 1, 1, 4, 6, 1, 5, 2, 7, 5, 6, 1, 4, 2, 1, 6, 7, 2, 1]
+23-05-2023 13:52:51 | 9, [1, 6, 1, 1, 3, 4, 4, 5, 3, 6, 7, 1, 4, 5, 5, 6, 1, 7, 1, 5, 4, 3, 1, 4, 6, 1, 5, 1, 7, 5, 6, 3, 4, 2, 3, 6, 7, 2, 1]
+23-05-2023 13:52:51 | 10, [2, 6, 1, 2, 3, 4, 4, 5, 3, 6, 7, 2, 4, 5, 5, 6, 1, 7, 2, 5, 4, 3, 1, 4, 6, 1, 5, 2, 7, 5, 6, 3, 4, 1, 3, 6, 7, 1, 1]
+23-05-2023 13:52:52 | Update genome in models folder 1
+23-05-2023 13:52:52 | Update genome in models folder 2
+23-05-2023 13:52:56 | Update genome in models folder 3
+23-05-2023 13:52:56 | Update genome in models folder 4
+23-05-2023 13:53:00 | Update genome in models folder 5
+23-05-2023 13:53:00 | Update genome in models folder 6
+23-05-2023 13:53:04 | Update genome in models folder 7
+23-05-2023 13:53:04 | Update genome in models folder 8
+23-05-2023 13:53:08 | Update genome in models folder 9
+23-05-2023 13:53:08 | Update genome in models folder 10
+23-05-2023 13:52:52 | Evaluation of individual 1
+23-05-2023 13:52:52 | Run external models ...
+23-05-2023 13:52:56 | Done.
+23-05-2023 13:53:08 | Evaluation of individual 10
+23-05-2023 13:53:08 | Run external models ...
+23-05-2023 13:53:11 | Done.
+23-05-2023 13:53:09 | Start model C:\Users\steffenv\CoMOLA\models_9\HabStruct\HabStruct.R
+23-05-2023 13:53:10 | The model C:\Users\steffenv\CoMOLA\models_9\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:09 | Start model C:\Users\steffenv\CoMOLA\models_9\SYM\SYM.R
+23-05-2023 13:53:10 | The model C:\Users\steffenv\CoMOLA\models_9\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:09 | Start model C:\Users\steffenv\CoMOLA\models_9\WYLD\WYLD.R
+23-05-2023 13:53:10 | The model C:\Users\steffenv\CoMOLA\models_9\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:10 | Start model C:\Users\steffenv\CoMOLA\models_9\SAR\SAR.R
+23-05-2023 13:53:10 | The model C:\Users\steffenv\CoMOLA\models_9\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:52:54 | Start model C:\Users\steffenv\CoMOLA\models\HabStruct\HabStruct.R
+23-05-2023 13:52:55 | The model C:\Users\steffenv\CoMOLA\models\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:52:54 | Start model C:\Users\steffenv\CoMOLA\models\SYM\SYM.R
+23-05-2023 13:52:55 | The model C:\Users\steffenv\CoMOLA\models\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:52:54 | Start model C:\Users\steffenv\CoMOLA\models\WYLD\WYLD.R
+23-05-2023 13:52:55 | The model C:\Users\steffenv\CoMOLA\models\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:52:54 | Start model C:\Users\steffenv\CoMOLA\models\SAR\SAR.R
+23-05-2023 13:52:55 | The model C:\Users\steffenv\CoMOLA\models\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:52:52 | Evaluation of individual 2
+23-05-2023 13:52:52 | Run external models ...
+23-05-2023 13:52:56 | Done.
+23-05-2023 13:52:54 | Start model C:\Users\steffenv\CoMOLA\models_1\HabStruct\HabStruct.R
+23-05-2023 13:52:55 | The model C:\Users\steffenv\CoMOLA\models_1\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:52:54 | Start model C:\Users\steffenv\CoMOLA\models_1\SYM\SYM.R
+23-05-2023 13:52:55 | The model C:\Users\steffenv\CoMOLA\models_1\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:52:54 | Start model C:\Users\steffenv\CoMOLA\models_1\WYLD\WYLD.R
+23-05-2023 13:52:55 | The model C:\Users\steffenv\CoMOLA\models_1\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:52:54 | Start model C:\Users\steffenv\CoMOLA\models_1\SAR\SAR.R
+23-05-2023 13:52:55 | The model C:\Users\steffenv\CoMOLA\models_1\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:52:56 | Evaluation of individual 3
+23-05-2023 13:52:56 | Run external models ...
+23-05-2023 13:53:00 | Done.
+23-05-2023 13:52:58 | Start model C:\Users\steffenv\CoMOLA\models_2\HabStruct\HabStruct.R
+23-05-2023 13:52:59 | The model C:\Users\steffenv\CoMOLA\models_2\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:52:58 | Start model C:\Users\steffenv\CoMOLA\models_2\SYM\SYM.R
+23-05-2023 13:52:59 | The model C:\Users\steffenv\CoMOLA\models_2\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:52:58 | Start model C:\Users\steffenv\CoMOLA\models_2\WYLD\WYLD.R
+23-05-2023 13:52:59 | The model C:\Users\steffenv\CoMOLA\models_2\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:52:58 | Start model C:\Users\steffenv\CoMOLA\models_2\SAR\SAR.R
+23-05-2023 13:52:59 | The model C:\Users\steffenv\CoMOLA\models_2\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:52:56 | Evaluation of individual 4
+23-05-2023 13:52:56 | Run external models ...
+23-05-2023 13:53:00 | Done.
+23-05-2023 13:52:58 | Start model C:\Users\steffenv\CoMOLA\models_3\HabStruct\HabStruct.R
+23-05-2023 13:52:59 | The model C:\Users\steffenv\CoMOLA\models_3\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:52:58 | Start model C:\Users\steffenv\CoMOLA\models_3\SYM\SYM.R
+23-05-2023 13:52:59 | The model C:\Users\steffenv\CoMOLA\models_3\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:52:58 | Start model C:\Users\steffenv\CoMOLA\models_3\WYLD\WYLD.R
+23-05-2023 13:52:59 | The model C:\Users\steffenv\CoMOLA\models_3\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:52:58 | Start model C:\Users\steffenv\CoMOLA\models_3\SAR\SAR.R
+23-05-2023 13:52:59 | The model C:\Users\steffenv\CoMOLA\models_3\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:00 | Evaluation of individual 5
+23-05-2023 13:53:00 | Run external models ...
+23-05-2023 13:53:04 | Done.
+23-05-2023 13:53:02 | Start model C:\Users\steffenv\CoMOLA\models_4\HabStruct\HabStruct.R
+23-05-2023 13:53:02 | The model C:\Users\steffenv\CoMOLA\models_4\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:02 | Start model C:\Users\steffenv\CoMOLA\models_4\SYM\SYM.R
+23-05-2023 13:53:02 | The model C:\Users\steffenv\CoMOLA\models_4\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:02 | Start model C:\Users\steffenv\CoMOLA\models_4\WYLD\WYLD.R
+23-05-2023 13:53:02 | The model C:\Users\steffenv\CoMOLA\models_4\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:02 | Start model C:\Users\steffenv\CoMOLA\models_4\SAR\SAR.R
+23-05-2023 13:53:02 | The model C:\Users\steffenv\CoMOLA\models_4\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:00 | Evaluation of individual 6
+23-05-2023 13:53:00 | Run external models ...
+23-05-2023 13:53:04 | Done.
+23-05-2023 13:53:02 | Start model C:\Users\steffenv\CoMOLA\models_5\HabStruct\HabStruct.R
+23-05-2023 13:53:02 | The model C:\Users\steffenv\CoMOLA\models_5\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:02 | Start model C:\Users\steffenv\CoMOLA\models_5\SYM\SYM.R
+23-05-2023 13:53:02 | The model C:\Users\steffenv\CoMOLA\models_5\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:02 | Start model C:\Users\steffenv\CoMOLA\models_5\WYLD\WYLD.R
+23-05-2023 13:53:02 | The model C:\Users\steffenv\CoMOLA\models_5\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:02 | Start model C:\Users\steffenv\CoMOLA\models_5\SAR\SAR.R
+23-05-2023 13:53:02 | The model C:\Users\steffenv\CoMOLA\models_5\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:04 | Evaluation of individual 7
+23-05-2023 13:53:04 | Run external models ...
+23-05-2023 13:53:08 | Done.
+23-05-2023 13:53:06 | Start model C:\Users\steffenv\CoMOLA\models_6\HabStruct\HabStruct.R
+23-05-2023 13:53:06 | The model C:\Users\steffenv\CoMOLA\models_6\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:06 | Start model C:\Users\steffenv\CoMOLA\models_6\SYM\SYM.R
+23-05-2023 13:53:06 | The model C:\Users\steffenv\CoMOLA\models_6\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:06 | Start model C:\Users\steffenv\CoMOLA\models_6\WYLD\WYLD.R
+23-05-2023 13:53:06 | The model C:\Users\steffenv\CoMOLA\models_6\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:06 | Start model C:\Users\steffenv\CoMOLA\models_6\SAR\SAR.R
+23-05-2023 13:53:06 | The model C:\Users\steffenv\CoMOLA\models_6\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:04 | Evaluation of individual 8
+23-05-2023 13:53:04 | Run external models ...
+23-05-2023 13:53:08 | Done.
+23-05-2023 13:53:06 | Start model C:\Users\steffenv\CoMOLA\models_7\HabStruct\HabStruct.R
+23-05-2023 13:53:06 | The model C:\Users\steffenv\CoMOLA\models_7\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:06 | Start model C:\Users\steffenv\CoMOLA\models_7\SYM\SYM.R
+23-05-2023 13:53:06 | The model C:\Users\steffenv\CoMOLA\models_7\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:06 | Start model C:\Users\steffenv\CoMOLA\models_7\WYLD\WYLD.R
+23-05-2023 13:53:06 | The model C:\Users\steffenv\CoMOLA\models_7\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:06 | Start model C:\Users\steffenv\CoMOLA\models_7\SAR\SAR.R
+23-05-2023 13:53:06 | The model C:\Users\steffenv\CoMOLA\models_7\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:08 | Evaluation of individual 9
+23-05-2023 13:53:08 | Run external models ...
+23-05-2023 13:53:11 | Done.
+23-05-2023 13:53:09 | Start model C:\Users\steffenv\CoMOLA\models_8\HabStruct\HabStruct.R
+23-05-2023 13:53:10 | The model C:\Users\steffenv\CoMOLA\models_8\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:09 | Start model C:\Users\steffenv\CoMOLA\models_8\SYM\SYM.R
+23-05-2023 13:53:10 | The model C:\Users\steffenv\CoMOLA\models_8\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:09 | Start model C:\Users\steffenv\CoMOLA\models_8\WYLD\WYLD.R
+23-05-2023 13:53:10 | The model C:\Users\steffenv\CoMOLA\models_8\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:09 | Start model C:\Users\steffenv\CoMOLA\models_8\SAR\SAR.R
+23-05-2023 13:53:10 | The model C:\Users\steffenv\CoMOLA\models_8\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:13 | not_accepted_ind []
+23-05-2023 13:53:13 | infeasible_ind: []
+23-05-2023 13:53:13 | Fitness values are: [[21.1, 7.92446596230557, 98.5477613429834, 95.1910463094674], [25.9333333333333, 7.92446596230557, 80.6053216107057, 96.0815157262526], [23.8666666666667, 7.92446596230557, 95.9102300186881, 95.1279102989629], [28.3666666666667, 7.92446596230557, 85.5130223102889, 95.5783607494134], [22.4666666666667, 7.92446596230557, 90.1769195561304, 95.8205948863844], [23.9, 7.92446596230557, 88.4372760880414, 95.9358518437466], [29.0333333333333, 7.92446596230557, 71.1268305553255, 96.5137901058954], [29.2, 7.92446596230557, 74.2913333522951, 96.2168940195256], [29.3666666666667, 7.92446596230557, 83.4335807686091, 95.6684508395035], [25.8666666666667, 7.92446596230557, 86.2061694908489, 95.5483307193834]] 
+
+23-05-2023 13:53:13 | Population for generation 3: 
+23-05-2023 13:53:13 | 1, [3, 6, 3, 3, 3, 3, 3, 3, 3, 6, 7, 3, 3, 3, 3, 6, 3, 7, 3, 3, 4, 3, 1, 4, 6, 1, 5, 1, 7, 5, 6, 3, 4, 1, 3, 6, 7, 1, 1]
+23-05-2023 13:53:13 | 2, [1, 6, 1, 1, 3, 4, 4, 5, 3, 6, 7, 4, 4, 5, 5, 6, 1, 7, 1, 5, 3, 3, 3, 3, 6, 3, 5, 2, 7, 5, 6, 3, 1, 2, 3, 6, 7, 2, 1]
+23-05-2023 13:53:13 | 3, [2, 6, 1, 2, 3, 4, 4, 1, 3, 6, 7, 2, 4, 1, 1, 6, 1, 7, 2, 1, 4, 3, 2, 4, 6, 2, 5, 2, 7, 5, 6, 3, 4, 2, 3, 6, 7, 2, 2]
+23-05-2023 13:53:13 | 4, [2, 6, 2, 2, 3, 4, 4, 5, 3, 6, 7, 2, 4, 5, 5, 6, 2, 7, 2, 5, 4, 3, 1, 4, 6, 1, 1, 2, 7, 1, 6, 3, 4, 2, 3, 6, 7, 2, 1]
+23-05-2023 13:53:13 | 5, [4, 6, 4, 4, 4, 4, 4, 4, 4, 6, 7, 4, 4, 4, 4, 6, 4, 7, 4, 4, 4, 4, 4, 4, 6, 4, 4, 4, 7, 4, 6, 4, 4, 4, 4, 6, 7, 4, 4]
+23-05-2023 13:53:13 | 6, [4, 6, 4, 4, 4, 4, 6, 4, 4, 6, 7, 4, 4, 4, 4, 6, 4, 7, 4, 4, 4, 4, 4, 4, 6, 4, 4, 4, 7, 4, 6, 4, 4, 4, 4, 6, 7, 4, 4]
+23-05-2023 13:53:13 | 7, [1, 6, 1, 1, 3, 4, 4, 5, 3, 6, 7, 2, 4, 5, 5, 6, 2, 7, 2, 5, 4, 3, 2, 4, 6, 2, 5, 2, 7, 5, 6, 3, 4, 2, 3, 6, 7, 2, 2]
+23-05-2023 13:53:13 | 8, [2, 6, 2, 2, 2, 2, 2, 2, 2, 6, 7, 2, 2, 2, 2, 6, 2, 7, 2, 5, 4, 3, 2, 4, 6, 2, 5, 2, 7, 5, 6, 3, 4, 2, 3, 6, 7, 2, 2]
+23-05-2023 13:53:13 | 9, [3, 6, 3, 3, 3, 3, 3, 3, 3, 6, 7, 3, 3, 3, 3, 6, 3, 7, 3, 3, 3, 3, 3, 3, 6, 3, 3, 3, 7, 3, 6, 3, 3, 3, 3, 6, 7, 2, 2]
+23-05-2023 13:53:13 | 10, [2, 6, 2, 2, 3, 4, 4, 5, 3, 6, 7, 2, 4, 5, 5, 6, 2, 7, 2, 5, 4, 3, 2, 4, 6, 2, 5, 2, 7, 5, 6, 3, 4, 2, 3, 6, 7, 3, 3]
+23-05-2023 13:53:14 | Update genome in models folder 1
+23-05-2023 13:53:14 | Update genome in models folder 2
+23-05-2023 13:53:17 | Update genome in models folder 3
+23-05-2023 13:53:17 | Update genome in models folder 4
+23-05-2023 13:53:21 | Update genome in models folder 5
+23-05-2023 13:53:21 | Update genome in models folder 6
+23-05-2023 13:53:25 | Update genome in models folder 7
+23-05-2023 13:53:25 | Update genome in models folder 8
+23-05-2023 13:53:29 | Update genome in models folder 9
+23-05-2023 13:53:29 | Update genome in models folder 10
+23-05-2023 13:53:14 | Evaluation of individual 1
+23-05-2023 13:53:14 | Run external models ...
+23-05-2023 13:53:17 | Done.
+23-05-2023 13:53:29 | Evaluation of individual 10
+23-05-2023 13:53:29 | Run external models ...
+23-05-2023 13:53:33 | Done.
+23-05-2023 13:53:31 | Start model C:\Users\steffenv\CoMOLA\models_9\HabStruct\HabStruct.R
+23-05-2023 13:53:32 | The model C:\Users\steffenv\CoMOLA\models_9\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:31 | Start model C:\Users\steffenv\CoMOLA\models_9\SYM\SYM.R
+23-05-2023 13:53:31 | The model C:\Users\steffenv\CoMOLA\models_9\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:31 | Start model C:\Users\steffenv\CoMOLA\models_9\WYLD\WYLD.R
+23-05-2023 13:53:32 | The model C:\Users\steffenv\CoMOLA\models_9\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:31 | Start model C:\Users\steffenv\CoMOLA\models_9\SAR\SAR.R
+23-05-2023 13:53:32 | The model C:\Users\steffenv\CoMOLA\models_9\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:15 | Start model C:\Users\steffenv\CoMOLA\models\HabStruct\HabStruct.R
+23-05-2023 13:53:16 | The model C:\Users\steffenv\CoMOLA\models\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:15 | Start model C:\Users\steffenv\CoMOLA\models\SYM\SYM.R
+23-05-2023 13:53:16 | The model C:\Users\steffenv\CoMOLA\models\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:15 | Start model C:\Users\steffenv\CoMOLA\models\WYLD\WYLD.R
+23-05-2023 13:53:16 | The model C:\Users\steffenv\CoMOLA\models\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:15 | Start model C:\Users\steffenv\CoMOLA\models\SAR\SAR.R
+23-05-2023 13:53:16 | The model C:\Users\steffenv\CoMOLA\models\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:14 | Evaluation of individual 2
+23-05-2023 13:53:14 | Run external models ...
+23-05-2023 13:53:17 | Done.
+23-05-2023 13:53:15 | Start model C:\Users\steffenv\CoMOLA\models_1\HabStruct\HabStruct.R
+23-05-2023 13:53:16 | The model C:\Users\steffenv\CoMOLA\models_1\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:15 | Start model C:\Users\steffenv\CoMOLA\models_1\SYM\SYM.R
+23-05-2023 13:53:16 | The model C:\Users\steffenv\CoMOLA\models_1\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:15 | Start model C:\Users\steffenv\CoMOLA\models_1\WYLD\WYLD.R
+23-05-2023 13:53:16 | The model C:\Users\steffenv\CoMOLA\models_1\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:15 | Start model C:\Users\steffenv\CoMOLA\models_1\SAR\SAR.R
+23-05-2023 13:53:16 | The model C:\Users\steffenv\CoMOLA\models_1\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:17 | Evaluation of individual 3
+23-05-2023 13:53:17 | Run external models ...
+23-05-2023 13:53:21 | Done.
+23-05-2023 13:53:19 | Start model C:\Users\steffenv\CoMOLA\models_2\HabStruct\HabStruct.R
+23-05-2023 13:53:20 | The model C:\Users\steffenv\CoMOLA\models_2\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:19 | Start model C:\Users\steffenv\CoMOLA\models_2\SYM\SYM.R
+23-05-2023 13:53:20 | The model C:\Users\steffenv\CoMOLA\models_2\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:19 | Start model C:\Users\steffenv\CoMOLA\models_2\WYLD\WYLD.R
+23-05-2023 13:53:20 | The model C:\Users\steffenv\CoMOLA\models_2\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:19 | Start model C:\Users\steffenv\CoMOLA\models_2\SAR\SAR.R
+23-05-2023 13:53:20 | The model C:\Users\steffenv\CoMOLA\models_2\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:17 | Evaluation of individual 4
+23-05-2023 13:53:17 | Run external models ...
+23-05-2023 13:53:21 | Done.
+23-05-2023 13:53:19 | Start model C:\Users\steffenv\CoMOLA\models_3\HabStruct\HabStruct.R
+23-05-2023 13:53:20 | The model C:\Users\steffenv\CoMOLA\models_3\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:19 | Start model C:\Users\steffenv\CoMOLA\models_3\SYM\SYM.R
+23-05-2023 13:53:20 | The model C:\Users\steffenv\CoMOLA\models_3\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:19 | Start model C:\Users\steffenv\CoMOLA\models_3\WYLD\WYLD.R
+23-05-2023 13:53:20 | The model C:\Users\steffenv\CoMOLA\models_3\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:19 | Start model C:\Users\steffenv\CoMOLA\models_3\SAR\SAR.R
+23-05-2023 13:53:20 | The model C:\Users\steffenv\CoMOLA\models_3\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:21 | Evaluation of individual 5
+23-05-2023 13:53:21 | Run external models ...
+23-05-2023 13:53:25 | Done.
+23-05-2023 13:53:23 | Start model C:\Users\steffenv\CoMOLA\models_4\HabStruct\HabStruct.R
+23-05-2023 13:53:24 | The model C:\Users\steffenv\CoMOLA\models_4\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:23 | Start model C:\Users\steffenv\CoMOLA\models_4\SYM\SYM.R
+23-05-2023 13:53:24 | The model C:\Users\steffenv\CoMOLA\models_4\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:23 | Start model C:\Users\steffenv\CoMOLA\models_4\WYLD\WYLD.R
+23-05-2023 13:53:24 | The model C:\Users\steffenv\CoMOLA\models_4\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:23 | Start model C:\Users\steffenv\CoMOLA\models_4\SAR\SAR.R
+23-05-2023 13:53:24 | The model C:\Users\steffenv\CoMOLA\models_4\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:21 | Evaluation of individual 6
+23-05-2023 13:53:21 | Run external models ...
+23-05-2023 13:53:25 | Done.
+23-05-2023 13:53:23 | Start model C:\Users\steffenv\CoMOLA\models_5\HabStruct\HabStruct.R
+23-05-2023 13:53:24 | The model C:\Users\steffenv\CoMOLA\models_5\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:23 | Start model C:\Users\steffenv\CoMOLA\models_5\SYM\SYM.R
+23-05-2023 13:53:24 | The model C:\Users\steffenv\CoMOLA\models_5\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:23 | Start model C:\Users\steffenv\CoMOLA\models_5\WYLD\WYLD.R
+23-05-2023 13:53:24 | The model C:\Users\steffenv\CoMOLA\models_5\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:23 | Start model C:\Users\steffenv\CoMOLA\models_5\SAR\SAR.R
+23-05-2023 13:53:24 | The model C:\Users\steffenv\CoMOLA\models_5\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:25 | Evaluation of individual 7
+23-05-2023 13:53:25 | Run external models ...
+23-05-2023 13:53:29 | Done.
+23-05-2023 13:53:27 | Start model C:\Users\steffenv\CoMOLA\models_6\HabStruct\HabStruct.R
+23-05-2023 13:53:28 | The model C:\Users\steffenv\CoMOLA\models_6\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:27 | Start model C:\Users\steffenv\CoMOLA\models_6\SYM\SYM.R
+23-05-2023 13:53:28 | The model C:\Users\steffenv\CoMOLA\models_6\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:27 | Start model C:\Users\steffenv\CoMOLA\models_6\WYLD\WYLD.R
+23-05-2023 13:53:28 | The model C:\Users\steffenv\CoMOLA\models_6\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:27 | Start model C:\Users\steffenv\CoMOLA\models_6\SAR\SAR.R
+23-05-2023 13:53:28 | The model C:\Users\steffenv\CoMOLA\models_6\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:25 | Evaluation of individual 8
+23-05-2023 13:53:25 | Run external models ...
+23-05-2023 13:53:29 | Done.
+23-05-2023 13:53:27 | Start model C:\Users\steffenv\CoMOLA\models_7\HabStruct\HabStruct.R
+23-05-2023 13:53:28 | The model C:\Users\steffenv\CoMOLA\models_7\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:27 | Start model C:\Users\steffenv\CoMOLA\models_7\SYM\SYM.R
+23-05-2023 13:53:28 | The model C:\Users\steffenv\CoMOLA\models_7\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:27 | Start model C:\Users\steffenv\CoMOLA\models_7\WYLD\WYLD.R
+23-05-2023 13:53:28 | The model C:\Users\steffenv\CoMOLA\models_7\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:27 | Start model C:\Users\steffenv\CoMOLA\models_7\SAR\SAR.R
+23-05-2023 13:53:28 | The model C:\Users\steffenv\CoMOLA\models_7\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:29 | Evaluation of individual 9
+23-05-2023 13:53:29 | Run external models ...
+23-05-2023 13:53:33 | Done.
+23-05-2023 13:53:31 | Start model C:\Users\steffenv\CoMOLA\models_8\HabStruct\HabStruct.R
+23-05-2023 13:53:32 | The model C:\Users\steffenv\CoMOLA\models_8\HabStruct\HabStruct.R ran for 0 seconds.
+23-05-2023 13:53:31 | Start model C:\Users\steffenv\CoMOLA\models_8\SYM\SYM.R
+23-05-2023 13:53:32 | The model C:\Users\steffenv\CoMOLA\models_8\SYM\SYM.R ran for 0 seconds.
+23-05-2023 13:53:31 | Start model C:\Users\steffenv\CoMOLA\models_8\WYLD\WYLD.R
+23-05-2023 13:53:32 | The model C:\Users\steffenv\CoMOLA\models_8\WYLD\WYLD.R ran for 0 seconds.
+23-05-2023 13:53:31 | Start model C:\Users\steffenv\CoMOLA\models_8\SAR\SAR.R
+23-05-2023 13:53:32 | The model C:\Users\steffenv\CoMOLA\models_8\SAR\SAR.R ran for 0 seconds.
+23-05-2023 13:53:34 | not_accepted_ind []
+23-05-2023 13:53:34 | infeasible_ind: []
+23-05-2023 13:53:34 | Fitness values are: [[24.6, 7.92446596230557, 91.1451573947584, 95.4717723796671], [25.6166666666667, 7.92446596230557, 90.1430375362741, 95.3669347485137], [25.7666666666667, 7.92446596230557, 83.9510174510895, 95.9357181067707], [23.7666666666667, 7.92446596230557, 87.8630404565176, 95.6834658545185], [15.25, 7.92446596230557, 124.29279645908, 93.0988529014845], [15.75, 7.92446596230557, 121.329587377232, 93.1309041835358], [23.8666666666667, 7.92446596230557, 95.9102300186881, 95.1279102989629], [22.4666666666667, 7.92446596230557, 90.1769195561304, 95.8205948863844], [18.8333333333333, 7.92446596230557, 102.703089991818, 95.0764580369844], [20.7, 7.92446596230557, 103.482733003708, 94.7454225480541]] 
+
+23-05-2023 13:53:34 | The optimization process needed 64 seconds.
+23-05-2023 13:53:34 | Best Solutions: 
+
+23-05-2023 13:53:34 | [2, 6, 2, 2, 3, 4, 4, 5, 3, 6, 7, 2, 4, 5, 5, 6, 2, 7, 2, 5, 4, 3, 2, 4, 6, 2, 5, 2, 7, 5, 6, 3, 4, 2, 3, 6, 7, 2, 2] : [20.8666666666667, 7.92446596230557, 101.455407463168, 94.8876700587227]
+23-05-2023 13:53:34 | [1, 6, 1, 1, 1, 1, 1, 1, 1, 6, 7, 1, 1, 1, 1, 6, 1, 7, 1, 1, 1, 1, 1, 1, 6, 1, 1, 1, 7, 1, 6, 1, 1, 1, 1, 6, 7, 1, 1] : [46.0, 7.92446596230557, 30.0247799029278, 98.9108187134503]
+23-05-2023 13:53:34 | [1, 6, 1, 1, 3, 4, 4, 5, 3, 6, 7, 1, 4, 5, 5, 6, 1, 7, 1, 5, 4, 3, 1, 4, 6, 1, 5, 1, 7, 5, 6, 3, 4, 1, 3, 6, 7, 1, 1] : [31.3666666666667, 7.92446596230557, 79.9678448658094, 95.8186009896536]
+23-05-2023 13:53:34 | [2, 6, 2, 2, 2, 2, 2, 2, 2, 6, 7, 2, 2, 2, 2, 6, 2, 7, 2, 2, 2, 2, 2, 2, 6, 2, 2, 2, 7, 2, 6, 2, 2, 2, 2, 6, 7, 2, 2] : [25.5, 7.92446596230557, 77.1587881810041, 96.8687766714083]
+23-05-2023 13:53:34 | [2, 6, 1, 2, 1, 4, 4, 5, 1, 6, 7, 2, 4, 5, 5, 6, 1, 7, 2, 5, 4, 1, 1, 4, 6, 1, 5, 2, 7, 5, 6, 1, 4, 2, 1, 6, 7, 2, 1] : [29.2, 7.92446596230557, 74.2913333522951, 96.2168940195256]
+23-05-2023 13:53:34 | [3, 6, 3, 3, 3, 3, 3, 3, 3, 6, 7, 3, 3, 3, 3, 6, 3, 7, 3, 3, 3, 3, 3, 3, 6, 3, 3, 3, 7, 3, 6, 3, 3, 3, 3, 6, 7, 3, 3] : [18.6666666666667, 7.92446596230557, 104.730415532359, 94.9342105263158]
+23-05-2023 13:53:34 | [2, 6, 1, 2, 3, 1, 1, 5, 3, 6, 7, 2, 1, 5, 5, 6, 1, 7, 2, 5, 1, 3, 1, 1, 6, 1, 5, 2, 7, 5, 6, 3, 1, 2, 3, 6, 7, 2, 1] : [28.3666666666667, 7.92446596230557, 74.4226674213298, 96.3383515094041]
+23-05-2023 13:53:34 | [4, 6, 4, 4, 4, 4, 4, 4, 4, 6, 7, 4, 4, 4, 4, 6, 4, 7, 4, 4, 4, 4, 4, 4, 6, 4, 4, 4, 7, 4, 6, 4, 4, 4, 4, 6, 7, 4, 4] : [15.25, 7.92446596230557, 124.29279645908, 93.0988529014845]
+23-05-2023 13:53:34 | [2, 6, 1, 2, 3, 4, 4, 1, 3, 6, 7, 2, 4, 1, 1, 6, 1, 7, 2, 1, 4, 3, 1, 4, 6, 1, 1, 2, 7, 1, 6, 3, 4, 2, 3, 6, 7, 2, 1] : [28.6666666666667, 7.92446596230557, 70.3586504444394, 96.7315139025665]
+23-05-2023 13:53:34 | [2, 6, 2, 2, 2, 2, 2, 2, 2, 6, 7, 2, 2, 2, 2, 6, 2, 7, 2, 5, 4, 3, 2, 4, 6, 2, 5, 2, 7, 5, 6, 3, 4, 2, 3, 6, 7, 2, 2] : [22.4666666666667, 7.92446596230557, 90.1769195561304, 95.8205948863844]
+23-05-2023 13:53:34 | [1, 6, 1, 1, 3, 4, 4, 5, 3, 6, 7, 2, 4, 5, 5, 6, 2, 7, 2, 5, 4, 3, 2, 4, 6, 2, 5, 2, 7, 5, 6, 3, 4, 2, 3, 6, 7, 2, 2] : [23.8666666666667, 7.92446596230557, 95.9102300186881, 95.1279102989629]
+23-05-2023 13:53:34 | [3, 6, 3, 3, 3, 3, 3, 3, 3, 6, 7, 3, 3, 3, 3, 6, 3, 7, 3, 3, 3, 3, 3, 3, 6, 3, 5, 2, 7, 5, 6, 3, 1, 2, 3, 6, 7, 2, 1] : [21.1, 7.92446596230557, 98.5477613429834, 95.1910463094674]
+23-05-2023 13:53:34 | [4, 6, 4, 4, 4, 4, 6, 4, 4, 6, 7, 4, 4, 4, 4, 6, 4, 7, 4, 4, 4, 4, 4, 4, 6, 4, 4, 4, 7, 4, 6, 4, 4, 4, 4, 6, 7, 4, 4] : [15.75, 7.92446596230557, 121.329587377232, 93.1309041835358]
+23-05-2023 13:53:34 | [2, 6, 1, 2, 3, 4, 4, 1, 3, 6, 7, 2, 4, 1, 1, 6, 1, 7, 2, 1, 4, 3, 2, 4, 6, 2, 5, 2, 7, 5, 6, 3, 4, 2, 3, 6, 7, 2, 2] : [25.7666666666667, 7.92446596230557, 83.9510174510895, 95.9357181067707]
+23-05-2023 13:53:34 | [2, 6, 2, 2, 3, 4, 4, 5, 3, 6, 7, 2, 4, 5, 5, 6, 2, 7, 2, 5, 4, 3, 1, 4, 6, 1, 1, 2, 7, 1, 6, 3, 4, 2, 3, 6, 7, 2, 1] : [23.7666666666667, 7.92446596230557, 87.8630404565176, 95.6834658545185]
+23-05-2023 13:53:34 | [3, 6, 3, 3, 3, 3, 3, 3, 3, 6, 7, 3, 3, 3, 3, 6, 3, 7, 3, 3, 4, 3, 1, 4, 6, 1, 5, 1, 7, 5, 6, 3, 4, 1, 3, 6, 7, 1, 1] : [24.6, 7.92446596230557, 91.1451573947584, 95.4717723796671]
+23-05-2023 13:53:34 | Total runtime of the tool: 65 seconds.

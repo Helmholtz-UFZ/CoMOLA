@@ -37,6 +37,7 @@
 # Imports
 #------------------------------------------------------------------------------
 import os
+import platform
 from distutils.util import strtobool
 try:
     import ConfigParser
@@ -205,8 +206,10 @@ class ModelConfig:
         self.file_ini = wrkDir
 
         # set up file path for R (not necessary for RPy2)
-        self.file_path_R = dict_model['file_path_r']
-        
+        if platform.system() == 'Windows':
+            self.file_path_R = dict_model['file_path_r']
+        else:
+            self.file_path_R = 'R'
         # set up file path for Python
         self.file_path_python = dict_model['file_path_python']
         

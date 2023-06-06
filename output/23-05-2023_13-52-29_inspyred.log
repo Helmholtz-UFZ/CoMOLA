@@ -1,0 +1,44 @@
+2023-05-23 13:52:29,770 - inspyred.ec - DEBUG - generating initial population
+2023-05-23 13:52:29,997 - inspyred.ec - DEBUG - evaluating initial population
+2023-05-23 13:52:51,802 - inspyred.ec - DEBUG - population size is now 10
+2023-05-23 13:52:51,802 - inspyred.ec - DEBUG - archiving initial population
+2023-05-23 13:52:51,803 - inspyred.ec - DEBUG - archive size is now 10
+2023-05-23 13:52:51,803 - inspyred.ec - DEBUG - population size is now 10
+2023-05-23 13:52:51,803 - inspyred.ec - DEBUG - observation using file_observer at generation 0 and evaluation 10
+2023-05-23 13:52:51,840 - inspyred.ec - DEBUG - termination test using special_termination at generation 0 and evaluation 10
+2023-05-23 13:52:51,840 - inspyred.ec - DEBUG - termination test using generation_termination at generation 0 and evaluation 10
+2023-05-23 13:52:51,840 - inspyred.ec - DEBUG - termination test using diversity_termination at generation 0 and evaluation 10
+2023-05-23 13:52:51,841 - inspyred.ec - DEBUG - selection using constrained_tournament_selection at generation 0 and evaluation 10
+2023-05-23 13:52:51,858 - inspyred.ec - DEBUG - selected 10 candidates
+2023-05-23 13:52:51,858 - inspyred.ec - DEBUG - variation using n_point_crossover at generation 0 and evaluation 10
+2023-05-23 13:52:51,858 - inspyred.ec - DEBUG - variation using random_reset_mutation at generation 0 and evaluation 10
+2023-05-23 13:52:51,858 - inspyred.ec - DEBUG - created 10 offspring
+2023-05-23 13:52:51,858 - inspyred.ec - DEBUG - evaluation using evaluate at generation 0 and evaluation 10
+2023-05-23 13:53:13,146 - inspyred.ec - DEBUG - replacement using nsga_replacement at generation 0 and evaluation 20
+2023-05-23 13:53:13,147 - inspyred.ec - DEBUG - population size is now 10
+2023-05-23 13:53:13,147 - inspyred.ec - DEBUG - migration using default_migration at generation 0 and evaluation 20
+2023-05-23 13:53:13,147 - inspyred.ec - DEBUG - population size is now 10
+2023-05-23 13:53:13,147 - inspyred.ec - DEBUG - archival using best_archiver at generation 0 and evaluation 20
+2023-05-23 13:53:13,147 - inspyred.ec - DEBUG - archive size is now 13
+2023-05-23 13:53:13,147 - inspyred.ec - DEBUG - population size is now 10
+2023-05-23 13:53:13,148 - inspyred.ec - DEBUG - observation using file_observer at generation 1 and evaluation 20
+2023-05-23 13:53:13,148 - inspyred.ec - DEBUG - termination test using special_termination at generation 1 and evaluation 20
+2023-05-23 13:53:13,148 - inspyred.ec - DEBUG - termination test using generation_termination at generation 1 and evaluation 20
+2023-05-23 13:53:13,148 - inspyred.ec - DEBUG - termination test using diversity_termination at generation 1 and evaluation 20
+2023-05-23 13:53:13,149 - inspyred.ec - DEBUG - selection using constrained_tournament_selection at generation 1 and evaluation 20
+2023-05-23 13:53:13,152 - inspyred.ec - DEBUG - selected 10 candidates
+2023-05-23 13:53:13,153 - inspyred.ec - DEBUG - variation using n_point_crossover at generation 1 and evaluation 20
+2023-05-23 13:53:13,153 - inspyred.ec - DEBUG - variation using random_reset_mutation at generation 1 and evaluation 20
+2023-05-23 13:53:13,153 - inspyred.ec - DEBUG - created 10 offspring
+2023-05-23 13:53:13,153 - inspyred.ec - DEBUG - evaluation using evaluate at generation 1 and evaluation 20
+2023-05-23 13:53:34,533 - inspyred.ec - DEBUG - replacement using nsga_replacement at generation 1 and evaluation 30
+2023-05-23 13:53:34,534 - inspyred.ec - DEBUG - population size is now 10
+2023-05-23 13:53:34,534 - inspyred.ec - DEBUG - migration using default_migration at generation 1 and evaluation 30
+2023-05-23 13:53:34,534 - inspyred.ec - DEBUG - population size is now 10
+2023-05-23 13:53:34,534 - inspyred.ec - DEBUG - archival using best_archiver at generation 1 and evaluation 30
+2023-05-23 13:53:34,534 - inspyred.ec - DEBUG - archive size is now 16
+2023-05-23 13:53:34,534 - inspyred.ec - DEBUG - population size is now 10
+2023-05-23 13:53:34,534 - inspyred.ec - DEBUG - observation using file_observer at generation 2 and evaluation 30
+2023-05-23 13:53:34,572 - inspyred.ec - DEBUG - termination test using special_termination at generation 2 and evaluation 30
+2023-05-23 13:53:34,572 - inspyred.ec - DEBUG - termination test using generation_termination at generation 2 and evaluation 30
+2023-05-23 13:53:34,572 - inspyred.ec - DEBUG - termination from generation_termination at generation 2 and evaluation 30

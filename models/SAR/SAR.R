@@ -1,5 +1,5 @@
-setwd("C:/+STRAUCH+/+PAPER_WORK+/Opti-Tool/CoMOLA_basic/models/SAR")
-sink("C:/+STRAUCH+/+PAPER_WORK+/Opti-Tool/CoMOLA_basic/models/SAR/console.txt", append=FALSE)
+setwd("C:/Users/steffenv/CoMOLA/models/SAR")
+sink("C:/Users/steffenv/CoMOLA/models/SAR/console.txt", append=FALSE)
 ##########################################################################################
 #
 #     ~ ~ ~ Simple SAR (Species Area relationship) Model ~ ~ ~
@@ -40,6 +40,15 @@ S[is.na(S)] <- 0
 
 # write model output
 write.table(S, "SAR_output.csv",append=FALSE ,sep =";",col.names=FALSE ,row.names=FALSE)
+
+
+
+
+
+
+
+
+
 
 
 

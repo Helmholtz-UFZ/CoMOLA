@@ -1,5 +1,5 @@
-setwd("C:/+STRAUCH+/+PAPER_WORK+/Opti-Tool/CoMOLA_basic/models/SYM")
-sink("C:/+STRAUCH+/+PAPER_WORK+/Opti-Tool/CoMOLA_basic/models/SYM/console.txt", append=FALSE)
+setwd("C:/Users/steffenv/CoMOLA/models/SYM")
+sink("C:/Users/steffenv/CoMOLA/models/SYM/console.txt", append=FALSE)
 ##########################################################################################
 #
 #     ~ ~ ~ Simple Yield Model (SYM) ~ ~ ~
@@ -34,6 +34,47 @@ yield.sum <- sum(yield)
 
 # write model output
 write.table(yield.sum , "SYM_output.csv",append=FALSE ,sep =";",col.names=FALSE ,row.names=FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
