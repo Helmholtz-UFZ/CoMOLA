@@ -571,11 +571,11 @@ def run_model(file_path, file_path_R, file_path_python, RPy2, number):
         WriteLogMsg(msg, number)
         raise SystemError("Error in executing external model. File does not exist. %s" % file_path)
         req.close_window
-    elif not os.path.isfile(file_path_R):
-        msg = "Error in executing external model %s. File does not exist." % file_path_R
-        WriteLogMsg(msg, number)
-        raise SystemError("Error in executing external model. File does not exist. %s" % file_path_R)
-        req.close_window
+    #elif not os.path.isfile(file_path_R):
+    #    msg = "Error in executing external model %s. File does not exist." % file_path_R
+    #    WriteLogMsg(msg, number)
+    #    raise SystemError("Error in executing external model. File does not exist. %s" % file_path_R)
+    #    req.close_window
     elif not os.path.isfile(file_path_python):
         msg = "Error in executing external model %s. File does not exist." % file_path_python
         WriteLogMsg(msg, number)
@@ -653,7 +653,7 @@ def run_model(file_path, file_path_R, file_path_python, RPy2, number):
           
             # or only the output lines will be documented
             # via append sink() in the R file 
-            cmd = [file_path_R, 'CMD', 'BATCH', file_path]  
+            cmd = ['R', 'CMD', 'BATCH', file_path]
             begin=time.time()
             subprocess.check_call(cmd)
             end=time.time()

@@ -37,7 +37,7 @@
 # Imports
 #------------------------------------------------------------------------------
 import os
-import platform
+import sys
 from distutils.util import strtobool
 try:
     import ConfigParser
@@ -61,8 +61,8 @@ def read_ini_file():
     dict_default_model = {}
     # default model settings
     # custom settings under [config_model] in ini file
-    dict_default_model.update({'file_path_r' : "C:\\Program Files\\R\\R-3.0.1\\bin\\x64\\R.exe"})
-    dict_default_model.update({'file_path_python' : "C:\\Python27\\Python.exe"})
+    dict_default_model.update({'file_path_r' : 'R'})
+    dict_default_model.update({'file_path_python' : sys.executable})
     dict_default_model.update({'opt_algorithm' : 'NSGA2'})
     dict_default_model.update({'rpy2_available' : 'False'})
     dict_default_model.update({'map' : 'False'})
@@ -165,16 +165,14 @@ def read_ini_file():
     except ConfigParser.NoSectionError:       
         print("An error occurred when the program tries to read the ini file. Exists a config.ini file in the main folder? Exist a config_model and a config_optimization_algorithm section in the config.ini?")
         req.close_window() 
-       
     return dict_alg, dict_model, dict_map
 
-# read the ini file
+# the ini file
 # ini_list holds dict_alg, dict_model and dict_map from read_ini_file
 ini_list = read_ini_file()
 dict_alg = ini_list[0]
 dict_model = ini_list[1] 
 dict_map = ini_list[2] 
-
 #------------------------------------------------------------------------------
 #   Config model
 #------------------------------------------------------------------------------
@@ -206,10 +204,7 @@ class ModelConfig:
         self.file_ini = wrkDir
 
         # set up file path for R (not necessary for RPy2)
-        if platform.system() == 'Windows':
-            self.file_path_R = dict_model['file_path_r']
-        else:
-            self.file_path_R = 'R'
+        self.file_path_R = dict_model['file_path_r']
         # set up file path for Python
         self.file_path_python = dict_model['file_path_python']
         

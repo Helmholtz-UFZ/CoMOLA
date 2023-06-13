@@ -15,8 +15,8 @@ Tippen Sie 'demo()' für einige Demos, 'help()' für on-line Hilfe, oder
 'help.start()' für eine HTML Browserschnittstelle zur Hilfe.
 Tippen Sie 'q()', um R zu verlassen.
 
-> setwd("C:/Users/steffenv/CoMOLA/models_2/HabStruct")
-> sink("C:/Users/steffenv/CoMOLA/models_2/HabStruct/console.txt", append=FALSE)
+> setwd("C:/Users/steffenv/CoMOLA/models/HabStruct")
+> sink("C:/Users/steffenv/CoMOLA/models/HabStruct/console.txt", append=FALSE)
 > ##########################################################################################
 > #
 > #     ~ ~ ~ Simple habitat quality model based on landscape structure ~ ~ ~
@@ -1176,4 +1176,4 @@ Tippen Sie 'q()', um R zu verlassen.
 > 
 > proc.time()
        User      System verstrichen 
-       0.48        0.28        0.81 
+       0.60        0.10        0.79 

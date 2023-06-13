@@ -15,8 +15,8 @@ Tippen Sie 'demo()' für einige Demos, 'help()' für on-line Hilfe, oder
 'help.start()' für eine HTML Browserschnittstelle zur Hilfe.
 Tippen Sie 'q()', um R zu verlassen.
 
-> setwd("C:/Users/steffenv/CoMOLA/models_1/SYM")
-> sink("C:/Users/steffenv/CoMOLA/models_1/SYM/console.txt", append=FALSE)
+> setwd("C:/Users/steffenv/CoMOLA/models/SYM")
+> sink("C:/Users/steffenv/CoMOLA/models/SYM/console.txt", append=FALSE)
 > ##########################################################################################
 > #
 > #     ~ ~ ~ Simple Yield Model (SYM) ~ ~ ~
@@ -1398,4 +1398,4 @@ Tippen Sie 'q()', um R zu verlassen.
 > 
 > proc.time()
        User      System verstrichen 
-       0.43        0.18        0.67 
+       0.39        0.17        0.61 
