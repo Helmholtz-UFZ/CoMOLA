@@ -1,6 +1,5 @@
 setwd("/Users/victorsteffens/CoMOLA_repo/COMOla/models/WYLD")
 sink("/Users/victorsteffens/CoMOLA_repo/COMOla/models/WYLD/console.txt", append=FALSE)
-library(here)
 ##########################################################################################
 #
 #     ~ ~ ~ Simple model to predict water yield (WYLD) ~ ~ ~
@@ -22,7 +21,7 @@ library(here)
 # set working directory
 
 # read in ascii files
-lu.map <- read.table(here('models', 'WYLD', 'map.asc'), h=F, skip=6, sep=" ")
+lu.map <- read.table("map.asc", h=F, skip=6, sep=" ")
 
 # Kc coefficients
 Kc <- c(0.9,0.925,0.95,0.975,1,0.96,1.14)
@@ -37,7 +36,31 @@ for (i in 1:7) {
 wyld <- sum(lu.n*1/Kc)
 
 # write model output
-write.table(wyld , here('models', 'WYLD', 'WYLD_output.csv'),append=FALSE ,sep =";",col.names=FALSE ,row.names=FALSE)
+write.table(wyld , "WYLD_output.csv",append=FALSE ,sep =";",col.names=FALSE ,row.names=FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

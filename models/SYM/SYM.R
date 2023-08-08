@@ -1,6 +1,5 @@
 setwd("/Users/victorsteffens/CoMOLA_repo/COMOla/models/SYM")
 sink("/Users/victorsteffens/CoMOLA_repo/COMOla/models/SYM/console.txt", append=FALSE)
-library(here)
 ##########################################################################################
 #
 #     ~ ~ ~ Simple Yield Model (SYM) ~ ~ ~
@@ -22,7 +21,7 @@ library(here)
 # set working directory
 
 # read in ascii files
-lu.map <- read.table(here('models', 'SYM' ,'map.asc'), h=F, skip=6, sep=" ")
+lu.map <- read.table("map.asc", h=F, skip=6, sep=" ")
 fert.map <- read.table("soil_fertility.asc", h=F, skip=6, sep=" ")
 
 # array index for arable land
@@ -34,15 +33,6 @@ yield[is.na(yield)] <- 0
 yield.sum <- sum(yield)
 
 # write model output
-write.table(yield.sum ,here('models', 'SYM','SYM_output.csv'),append=FALSE ,sep =";",col.names=FALSE ,row.names=FALSE)
-
-
-
-
-
-
-
-
-
+write.table(yield.sum , "SYM_output.csv",append=FALSE ,sep =";",col.names=FALSE ,row.names=FALSE)
 
 sink()

@@ -1,7 +1,5 @@
 setwd("/Users/victorsteffens/CoMOLA_repo/COMOla/models/SAR")
-sink("/Users/victorsteffens/CoMOLA_repo/COMOla/models/SAR/console.txt", append=FALSE)
-library(here)
-
+sink("/Users/victorsteffens/CoMOLA_repo/COMOla/models/SAR/console.txt", append=FALSE) 
 ##########################################################################################
 #
 #     ~ ~ ~ Simple SAR (Species Area relationship) Model ~ ~ ~
@@ -20,7 +18,7 @@ library(here)
 
 # set working directory
 # read in ascii files
-lu.map <- read.table(here('models', 'SAR', 'map.asc'), h=F, skip=6, sep=" ")
+lu.map <- read.table("map.asc", h=F, skip=6, sep=" ")
 
 # determine area (= number of cells) covered by forest
 forest.area <- length(which(lu.map == 7))          
@@ -40,15 +38,6 @@ S[is.na(S)] <- 0
 # plot(S.100)
 
 # write model output
-write.table(S, here('models', 'SAR', 'SAR_output.csv') ,append=FALSE ,sep =";",col.names=FALSE ,row.names=FALSE)
-
-
-
-
-
-
-
-
-
+write.table(S, "SAR_output.csv",append=FALSE ,sep =";",col.names=FALSE ,row.names=FALSE)
 
 sink()

@@ -1,6 +1,5 @@
 setwd("/Users/victorsteffens/CoMOLA_repo/COMOla/models/HabStruct")
 sink("/Users/victorsteffens/CoMOLA_repo/COMOla/models/HabStruct/console.txt", append=FALSE)
-library(here)
 ##########################################################################################
 #
 #     ~ ~ ~ Simple habitat quality model based on landscape structure ~ ~ ~
@@ -21,7 +20,7 @@ library(here)
 # set working directory
 
 # read in ascii files
-lu.map <- read.table(here('models', 'HabStruct','map.asc'), h=F, skip=6, sep=" ")
+lu.map <- read.table("map.asc", h=F, skip=6, sep=" ")
 #plot(lu.map, col= c("khaki1","khaki2","gold1","gold2","gold3","darkolivegreen3","forestgreen","firebrick"))
 
 #################### Function for counting habitat edges ####################
@@ -127,16 +126,7 @@ edges.0.2.weighted <- edges.0.2 *1/5
 edges <- edges.1 + edges.0.5.weighted + edges.0.33.weighted + edges.0.25.weighted + edges.0.2.weighted
 
 # write model output
-write.table(edges, here('models', 'HabStruct','HabStruct_output.csv'),append=FALSE ,sep =";",col.names=FALSE ,row.names=FALSE)
-
-
-
-
-
-
-
-
-
+write.table(edges, "HabStruct_output.csv",append=FALSE ,sep =";",col.names=FALSE ,row.names=FALSE)
 
 
 sink()
