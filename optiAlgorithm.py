@@ -272,7 +272,7 @@ def evaluate(candidates, args):
         
         # check if individuals are subject to special_termination
         # (genome consists of zeros)
-        if all(item is 0 for item in param):
+        if all(item == 0 for item in param):
             not_accepted_ind.append(i)
 
         # check if individuals are feasible and constrained_tournament_selection is not selected
