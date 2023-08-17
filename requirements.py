@@ -37,15 +37,13 @@
 #------------------------------------------------------------------------------
 import os
 import sys
-import re
+import importlib
 import config as cfg
 
 #------------------------------------------------------------------------------  
 #   Check the Python Version and requirements of the tool
 #------------------------------------------------------------------------------
 def check_requirements():
-    """Check the Python Version and requirements of the tool."""
-    
     # path to the used Python version
     python_folder = sys.executable
     # check for python 3.11
