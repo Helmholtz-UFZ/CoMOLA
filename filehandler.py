@@ -653,7 +653,7 @@ def run_model(file_path, file_path_R, file_path_python, RPy2, number):
           
             # or only the output lines will be documented
             # via append sink() in the R file 
-            cmd = ['R', 'CMD', 'BATCH', file_path]
+            cmd = [file_path_R, 'CMD', 'BATCH', file_path]
             begin=time.time()
             subprocess.check_call(cmd)
             end=time.time()
