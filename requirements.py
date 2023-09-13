@@ -46,8 +46,9 @@ import config as cfg
 def check_requirements():
     # path to the used Python version
     python_folder = sys.executable
-    # check for python 3.11
-    if not sys.version_info[:2] == (3, 11):
+    accepted_versions = [(3,9),(3,10),(3,11)] 
+    # check for accepted python versions
+    if not sys.version_info[:2] in accepted_versions:
         print ("Warning: The tool is testet for Python 3.11. You started the tool with Python version from %s." %python_folder)  
     # check if the libraries matplotlib and RPy2 exist
     matplotlib_exist = importlib.util.find_spec("matplotlib")
