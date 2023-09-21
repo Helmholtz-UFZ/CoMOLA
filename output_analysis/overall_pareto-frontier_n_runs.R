@@ -49,7 +49,7 @@ extract_fitness <- function(df){
 # In the best solutions csv file, fitness values for the three objectives are stored in the following order: HabStruct, HI, WQ
 # This code creates data frames with fitness values and their corresponding solution IDs for each run
 
-#look for all files in defined folder named 'best_solutions.csv' and parse them as a list of dataframes into files-variable
+# Parse all best_solution.csv-files from the output-folder into a list calles files
 filenames <- list.files(here('output'), pattern = 'best_solutions.csv')
 filenames <- paste(here('output'),filenames, sep ='/')
 files <- lapply(filenames, read.csv, h=F, skip=1, as.is=T)
