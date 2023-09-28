@@ -29,14 +29,17 @@ library(viridis)
 library(emoa)
 library(purrr)
 library(here)
+library(raster)
 
 # set prerequisites
 modelnames <- c("HabStruct", "SAR", "SYM", "WYLD")
+pal <- c('lightgoldenrod','goldenrod1','goldenrod2','goldenrod','goldenrod3','darkgreen','lightgreen','grey')
+rasternames <- c('Arable land 1','Arable land 2','Arable land 3','Arable land 4','Arable land 5','Forest','Pasture','Urban Area')
 
-#function for extracting fitness-scores for 4 objectives in given dataframe
+#function for extracting fitness-scores for 4 objectives in given dataframe, can be adjusted to 3 objectives respectively
 extract_fitness <- function(df){
-  df <- cbind.data.frame(as.numeric(gsub('\\[', '', df[,ncol(df)-3])),
-                         as.numeric(df[,ncol(df)-2]),
+  df <- cbind.data.frame(as.numeric(gsub('\\[', '', df[,ncol(df)-3])), #for 3 objectives, change to '-2'
+                         as.numeric(df[,ncol(df)-2]), #for 3 objectives, delete line
                          as.numeric(df[,ncol(df)-1]),
                          as.numeric(gsub('\\]', '', df[,ncol(df)])))
 }
@@ -49,7 +52,7 @@ extract_fitness <- function(df){
 # In the best solutions csv file, fitness values for the three objectives are stored in the following order: HabStruct, HI, WQ
 # This code creates data frames with fitness values and their corresponding solution IDs for each run
 
-# Parse all best_solution.csv-files from the output-folder into a list calles files
+# Parse all best_solution.csv-files from the output-folder into a list called files
 filenames <- list.files(here('output'), pattern = 'best_solutions.csv')
 filenames <- paste(here('output'),filenames, sep ='/')
 files <- lapply(filenames, read.csv, h=F, skip=1, as.is=T)
@@ -59,13 +62,6 @@ files <- lapply(files, extract_fitness)
 files <- lapply(files, setNames, modelnames)
 #apply ID numbers
 files <- imap(files, ~.x %>% mutate(ID = paste(.y, row_number(), sep = ".")))
-
-
-#for (i in 1:length(files)){
-#  for (j in 1:nrow(files[[i]])){
-#    files[[i]]$ID[j] <- paste(i,j, sep='.')
-#  }
-#}
 
 
 ############################################################
@@ -115,43 +111,42 @@ colnames(overall_best_solutions) <- c(modelnames,IDnames)
 ############################################################
 
 ## Single maxima
-
-# HabStruct
-sol_max_HabStruct <- overall_best_solutions[which.max(overall_best_solutions$HabStruct),c(1:4)] # returns fitness values of maximum solution for HabStruct
-ID_max_HabStruct  <- overall_best_solutions[which.max(overall_best_solutions$HabStruct),c(5:(5+length(IDs)-1))] # returns map IDs of maximum solution for HabStruct
-
-# SAR
-sol_max_SAR <- overall_best_solutions[which.max(overall_best_solutions$SAR),c(1:4)] # returns fitness values of maximum solution for SAR
-ID_max_SAR  <- overall_best_solutions[which.max(overall_best_solutions$SAR),c(5:(5+length(IDs)-1))] # returns map IDs of maximum solution for SAR
-
-# SYM
-sol_max_SYM <- overall_best_solutions[which.max(overall_best_solutions$SYM),c(1:4)] # returns fitness values of maximum solution for SYM
-ID_max_SYM  <- overall_best_solutions[which.max(overall_best_solutions$SYM),c(5:(5+length(IDs)-1))] # returns map IDs of maximum solution for SYM
-
-# WYLD
-sol_max_WYLD <- overall_best_solutions[which.max(overall_best_solutions$WYLD),c(1:4)] # returns fitness values of maximum solution for WYLD
-ID_max_WYLD  <- overall_best_solutions[which.max(overall_best_solutions$WYLD),c(5:(5+length(IDs)-1))] # returns map IDs of maximum solution for WYLD
+#Store the single maxima in a dataframe
+max_Solutions <- overall_best_solutions[apply(overall_best_solutions[1:length(modelnames)], MARGIN=2, which.max),]
 
 ## Compromise solution (sum of deviations from single mean values is minimal)
 which.mean <- function(w,x,y,z) which.min(abs(w - mean(w))+abs(x - mean(x))+abs(y - mean(y))+abs(z - mean(z)))
 sol_compromise <- overall_best_solutions[which.mean(overall_best_solutions$HabStruct,overall_best_solutions$SAR,overall_best_solutions$SYM,overall_best_solutions$WYLD),c(1:4)]
+
+#Extract ID's and process the list for easier access to plot, first max_IDs
+max_IDs <- max_Solutions[, (length(modelnames)+1):ncol(max_Solutions)]
+max_IDs <- lapply(data.frame(t(max_IDs)), function(x) {x[!is.na(x)]})
+names(max_IDs) <- paste('Max_', modelnames, sep='')
+max_IDs <- lapply(max_IDs, "[", seq(min(lengths(max_IDs))))
+#second compromised ID
 ID_compromise <- overall_best_solutions[which.mean(overall_best_solutions$HabStruct,overall_best_solutions$SAR,overall_best_solutions$SYM,overall_best_solutions$WYLD),c(5:(5+length(IDs)-1))]
+ID_compromise <- ID_compromise[, colSums(is.na(ID_compromise))==0]
+names(ID_compromise) <- 'Compromise'
+IDs <- append(max_IDs, ID_compromise)
+IDs <- lapply(IDs, function(x) {as.integer(unlist(strsplit(x, '[.]')))})
 
-## How to find the maps: Check the IDs, if the result looks, e.g. like this:
-# ID_1 ID_2 ID_3
-# 38 <NA> 2.12  3.5
-# there are two maps corresponding to the same fitness values. One from run 2 (solution ID 12) and one from run 3 (solution ID 5). In the output folder of the respective optimization run,
-# search for the shape file with the pattern e.g. 15-09-2021_14-09-07_best_ascii_map5.shp (here, output of run 3)
+#remove IDs in max_Solutions and rename rownames
+max_Solutions <- max_Solutions[,(1:length(modelnames))]
+rownames(max_Solutions) <- paste('Max_', modelnames, sep="")
 
+#build the path for max- and compromised solutions and store in list
+mapnames <- lapply(IDs, function(x){paste(paste(head(strsplit(tail(strsplit(filenames[x[1]], '/')[[1]],1),'_')[[1]],2),collapse='_'),'_best_ascii_map',x[2],'.asc',sep='')})
+mapnames <- paste(here('output'),mapnames, sep='/')
+maps <- lapply(mapnames, raster)
+names(maps) <- names(IDs)
 
 ############################################################
-#                   3D Plot
+#                  I Plot
 ############################################################
 
-sol <- overall_best_solutions[,1:4]
+sol <- overall_best_solutions[,(1:length(modelnames))]
 
-# You can change the axes on which objectives should be displed, e.g. by setting x=WQ, y=HabStruct, and fill=HabStruct - also adapt axis labels respectively
-
+# You can change the axes on which objectives should be displayed - don't forget to adapt axis labels respectively
 ggplot(sol, aes(x=HabStruct, y=SAR)) +
   geom_point(aes(size = WYLD, fill=SYM), shape=21, col="black")+
   
@@ -159,14 +154,29 @@ ggplot(sol, aes(x=HabStruct, y=SAR)) +
   geom_point(data = sol_compromise, aes(x=HabStruct, y = SAR),col='gold')+
   
   #highlight the maximised solutions
-  geom_point(data = sol_max_HabStruct, aes(x=HabStruct, y = SAR), col='white')+
-  geom_point(data = sol_max_SAR, aes(x=HabStruct, y=SAR), col='white')+
-  geom_point(data = sol_max_SYM, aes(x=HabStruct, y=SAR), col='white')+
-  geom_point(data = sol_max_WYLD, aes(x=HabStruct, y=SAR), col ='white')+
-  
+  geom_point(data = max_Solutions['Max_HabStruct',], aes(x=HabStruct, y = SAR), col='white')+
+  geom_point(data = max_Solutions['Max_SAR',], aes(x=HabStruct, y=SAR), col='white')+
+  geom_point(data = max_Solutions['Max_SYM',], aes(x=HabStruct, y=SAR), col='white')+
+  geom_point(data = max_Solutions['Max_WYLD',], aes(x=HabStruct, y=SAR), col ='white')+
   
   scale_fill_gradientn(colours = viridis(100))+
   labs(fill = "Agricultural Yield", size = "Water Yield")+
   xlab("Habitat quality based on landscape structure")+
   ylab("Species Area relationship")
 
+#plot every map in maps-list
+for (i in 1:length(maps)){
+  plot(maps[[i]], 
+       col=pal,
+       main=names(maps)[i],
+       legend = F,
+       axes = F,
+       box = F)
+  legend(x='topright', 
+         inset = c(-0.25, 0),
+         fill=pal, 
+         legend=rasternames, 
+         border = F, 
+         bty='n',
+         xpd=T)
+}
