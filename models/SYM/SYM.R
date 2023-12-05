@@ -1,5 +1,5 @@
-setwd("/Users/victorsteffens/CoMOLA_repo/COMOla/models/SYM")
-sink("/Users/victorsteffens/CoMOLA_repo/COMOla/models/SYM/console.txt", append=FALSE)
+setwd("/Users/victorsteffens/Documents/CoMOLA/CoMOLA_repo/COMOla_test/models/SYM")
+sink("/Users/victorsteffens/Documents/CoMOLA/CoMOLA_repo/COMOla_test/models/SYM/console.txt", append=FALSE)
 ##########################################################################################
 #
 #     ~ ~ ~ Simple Yield Model (SYM) ~ ~ ~
@@ -22,7 +22,7 @@ sink("/Users/victorsteffens/CoMOLA_repo/COMOla/models/SYM/console.txt", append=F
 
 # read in ascii files
 lu.map <- read.table("map.asc", h=F, skip=6, sep=" ")
-fert.map <- read.table("soil_fertility.asc", h=F, skip=6, sep=" ")
+fert.map <- read.table("soilfertilityfrompatch.asc", h=F, skip=6, sep=" ")
 
 # array index for arable land
 arable.idx <- which(lu.map <= 5 & lu.map > 0, arr.ind=T)
@@ -34,5 +34,156 @@ yield.sum <- sum(yield)
 
 # write model output
 write.table(yield.sum , "SYM_output.csv",append=FALSE ,sep =";",col.names=FALSE ,row.names=FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 sink()

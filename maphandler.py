@@ -15,7 +15,7 @@
 #
 #	Created:	We Oct 29 2014
 #
-#	Copyright:  (c) Carola Paetzold / Sven Lautenbach / Michael Strauch 2017
+#	Copyright:	(c) Carola Paetzold / Sven Lautenbach / Michael Strauch 2017
 #
 #	Licence:	This program is free software:
 #				you can redistribute it and/or modify it under the terms
@@ -89,7 +89,7 @@ start_land_cover = {}
 # dictionary with information per land use class if extreme seeds were created before
 extreme_seeds_dict = {}
 
-#-------------------------------------------------------------------------------------  
+#-------------------------------------------------------------------------------------	
 #	Start the termination of the optimization algorithm
 #-------------------------------------------------------------------------------------
 def logical_termination():
@@ -102,7 +102,7 @@ def logical_termination():
 	global end_optimization
 	return end_optimization
 	
-#-------------------------------------------------------------------------------------  
+#-------------------------------------------------------------------------------------	
 #	Read an ASCII-map
 #-------------------------------------------------------------------------------------
 def read_ascii_map(file):
@@ -125,9 +125,9 @@ def read_ascii_map(file):
 	map = np.genfromtxt(file, dtype=int, skip_header=6, filling_values='-1')
 	
 	print("map \n%s" %map)
-	return header, header_all,  map
+	return header, header_all,	map
 
-#-------------------------------------------------------------------------------------  
+#-------------------------------------------------------------------------------------	
 #	Determine the coordinates of neighboring cells of cell (col, row)
 #-------------------------------------------------------------------------------------
 def getNbh(col, row, ncols, nrows, four_neighbours):
@@ -145,7 +145,7 @@ def getNbh(col, row, ncols, nrows, four_neighbours):
 	if four_neighbours == 'False':
 		# cell is no edge cell
 		if col > 0 and row > 0 and row < nrows -1 and col < ncols -1:
-			nbhs_col = [x + col for x in[-1, -1, -1,  0, 0,  1, 1, 1]]
+			nbhs_col = [x + col for x in[-1, -1, -1,  0, 0,	 1, 1, 1]]
 			nbhs_row = [x + row for x in[-1,  0,  1, -1, 1, -1, 0, 1]]
 		# cell is a left edge element but no corner element
 		elif col == 0 and row > 0 and row < nrows -1:
@@ -153,15 +153,15 @@ def getNbh(col, row, ncols, nrows, four_neighbours):
 			nbhs_row= [x + row for x in[-1, -1, 0, 1, 1]]	
 		# cell is a right edge element but no corner element
 		elif col == ncols -1 and row > 0 and row < nrows -1:
-			nbhs_col= [x + col for x in[-1, -1, -1,  0, 0]]
-			nbhs_row= [x + row for x in[-1,  0,  1, -1, 1]]
+			nbhs_col= [x + col for x in[-1, -1, -1,	 0, 0]]
+			nbhs_row= [x + row for x in[-1,	 0,	 1, -1, 1]]
 		# cell is an upper edge element but no corner element
 		elif row == 0 and col > 0 and col < ncols -1:
-			nbhs_col= [x + col for x in[-1, -1,  0, 1, 1 ]]
-			nbhs_row= [x + row for x in[ 0,  1, 1, 0, 1 ]]
+			nbhs_col= [x + col for x in[-1, -1,	 0, 1, 1 ]]
+			nbhs_row= [x + row for x in[ 0,	 1, 1, 0, 1 ]]
 		# cell is a bottom edge element but no corner element	
 		elif row == nrows -1 and col > 0 and col < ncols -1:
-			nbhs_col= [x + col for x in[-1, -1,  0,  1, 1 ]]
+			nbhs_col= [x + col for x in[-1, -1,	 0,	 1, 1 ]]
 			nbhs_row= [x + row for x in[ -1, 0, -1, -1, 0 ]] 
 		# cell is in the left upper corner
 		elif col == 0 and row == 0:
@@ -169,7 +169,7 @@ def getNbh(col, row, ncols, nrows, four_neighbours):
 			nbhs_row= [x + row for x in[ 1, 0, 1]]
 		# cell is in the left bottom corner
 		elif col == 0 and row == nrows -1:
-			nbhs_col= [x + col for x in[ 0,  1,  1]]
+			nbhs_col= [x + col for x in[ 0,	 1,	 1]]
 			nbhs_row= [x + row for x in[ -1, 0, -1]] 
 		# cell is in the right upper corner
 		elif col == ncols -1 and row == 0:
@@ -192,7 +192,7 @@ def getNbh(col, row, ncols, nrows, four_neighbours):
 			nbhs_row= [x + row for x in[-1, 0, 1]]	
 		# cell is a right edge element but no corner element
 		elif col == ncols -1 and row > 0 and row < nrows -1:
-			nbhs_col= [x + col for x in[-1,  0, 0]]
+			nbhs_col= [x + col for x in[-1,	 0, 0]]
 			nbhs_row= [x + row for x in[ 0, 1, -1]]		
 		# cell is an upper edge element but no corner element
 		elif row == 0 and col > 0 and col < ncols -1:
@@ -200,7 +200,7 @@ def getNbh(col, row, ncols, nrows, four_neighbours):
 			nbhs_row= [x + row for x in[ 0, 1, 0]]
 		# cell is an bottom edge element but no corner element	
 		elif row == nrows -1 and col > 0 and col < ncols -1:
-			nbhs_col= [x + col for x in[-1, 0,  1]]
+			nbhs_col= [x + col for x in[-1, 0,	1]]
 			nbhs_row= [x + row for x in[ 0, -1, 0]] 
 		# cell is in the left upper corner
 		elif col == 0 and row == 0:
@@ -208,7 +208,7 @@ def getNbh(col, row, ncols, nrows, four_neighbours):
 			nbhs_row= [x + row for x in[ 1, 0]]
 		# cell is in the left bottom corner
 		elif col == 0 and row == nrows -1:
-			nbhs_col= [x + col for x in[ 0,  1]]
+			nbhs_col= [x + col for x in[ 0,	 1]]
 			nbhs_row= [x + row for x in[ -1, 0]] 
 		# cell is in the right upper corner
 		elif col == ncols -1 and row == 0:
@@ -227,7 +227,7 @@ def getNbh(col, row, ncols, nrows, four_neighbours):
 
 	return [nbhs_row, nbhs_col]
 
-#-------------------------------------------------------------------------------------  
+#-------------------------------------------------------------------------------------	
 #	Determination of patch elements
 #-------------------------------------------------------------------------------------
 def determine_patch_elements(row, col, map, patch_map, patch_ID, cls, four_neighbours):
@@ -243,7 +243,7 @@ def determine_patch_elements(row, col, map, patch_map, patch_ID, cls, four_neigh
 			four_neighbours if True than 4 neighboring cells are scanned else 8
 	"""
 	# determine coordinates of neighboring cells
-	new_nbhs_row, new_nbhs_col  = getNbh(col, row, map.shape[1], map.shape[0], four_neighbours)
+	new_nbhs_row, new_nbhs_col	= getNbh(col, row, map.shape[1], map.shape[0], four_neighbours)
 	# stack for patch elements whose neighboring cells should be determined
 	nbhs_row = []
 	nbhs_col = []
@@ -259,19 +259,19 @@ def determine_patch_elements(row, col, map, patch_map, patch_ID, cls, four_neigh
 			# mark all patch elements in patch_map with patch_ID
 			patch_map[nbhs_row[0], nbhs_col[0]] = patch_ID											
 			# get coordinates of neighboring cells of this cell
-			new_nbhs_row, new_nbhs_col  = getNbh(nbhs_col[0], nbhs_row[0], map.shape[1], map.shape[0], four_neighbours)
+			new_nbhs_row, new_nbhs_col	= getNbh(nbhs_col[0], nbhs_row[0], map.shape[1], map.shape[0], four_neighbours)
 			for i in range(len(new_nbhs_row)):
 				# add new neighboring cells to nbhs_row/col if new cells belong to cls and are not jet marked as patch element
 				if map[new_nbhs_row[i], new_nbhs_col[i]] == cls and patch_map[new_nbhs_row[i], new_nbhs_col[i]] == 0:
 					nbhs_row.append(new_nbhs_row[i])	 
 					nbhs_col.append(new_nbhs_col[i])
-		# delete this checked neighboring cell of the array	
+		# delete this checked neighboring cell of the array 
 		del nbhs_row[0]
 		del nbhs_col[0]
 
 	return patch_map
 
-#-------------------------------------------------------------------------------------  
+#-------------------------------------------------------------------------------------	
 #	Determine patch elements of a patch ID map and check equality of land use index
 #-------------------------------------------------------------------------------------
 def determine_IDmap_patch_elements(row, col, patch_map, map, neighbors, cls, landuse, error_dic, four_neighbours):
@@ -289,7 +289,7 @@ def determine_IDmap_patch_elements(row, col, patch_map, map, neighbors, cls, lan
 			four_neighbours if True than 4 neighboring cells are scanned else 8
 	"""
 	# determine coordinates of neighboring cells
-	new_nbhs_row, new_nbhs_col  = getNbh(col, row, map.shape[1], map.shape[0], four_neighbours)
+	new_nbhs_row, new_nbhs_col	= getNbh(col, row, map.shape[1], map.shape[0], four_neighbours)
 	# stack for patch elements whose neighboring cells should be determined
 	nbhs_row = []
 	nbhs_col = []
@@ -308,19 +308,19 @@ def determine_IDmap_patch_elements(row, col, patch_map, map, neighbors, cls, lan
 			if map[nbhs_row[0], nbhs_col[0]] != landuse:
 				error_dic.update({"(%s,%s)" %(nbhs_row[0], nbhs_col[0]) : "more than one land use index for one patch" })
 			# determine coordinates of neighboring cells from this cell
-			new_nbhs_row, new_nbhs_col  = getNbh(nbhs_col[0], nbhs_row[0], map.shape[1], map.shape[0], four_neighbours)
+			new_nbhs_row, new_nbhs_col	= getNbh(nbhs_col[0], nbhs_row[0], map.shape[1], map.shape[0], four_neighbours)
 			for i in range(len(new_nbhs_row)):
 				# add new neighboring cells to nbhs_row/col if new cells belong to cls in patch_map and not jet marked as scanned
 				if patch_map[new_nbhs_row[i], new_nbhs_col[i]] == cls and neighbors[new_nbhs_row[i], new_nbhs_col[i]] == 0:
 					nbhs_row.append(new_nbhs_row[i])
 					nbhs_col.append(new_nbhs_col[i])		
-		# delete this checked neighboring cell of the array	
+		# delete this checked neighboring cell of the array 
 		del nbhs_row[0]
 		del nbhs_col[0]
 
 	return neighbors, error_dic
 
-#-------------------------------------------------------------------------------------  
+#-------------------------------------------------------------------------------------	
 #	Cluster the cells of the map into patches
 #-------------------------------------------------------------------------------------
 def create_patch_ID_map(map, NODATA_value, static_elements, four_neighbours):
@@ -364,7 +364,7 @@ def create_patch_ID_map(map, NODATA_value, static_elements, four_neighbours):
 	WriteLogMsg("Runtime for the generation of the patch_ID_map: %d seconds." %(end-begin))						
 	return patches, genom	
 
-#-------------------------------------------------------------------------------------  
+#-------------------------------------------------------------------------------------	
 #	Read the patch ID map and create the start individual
 #-------------------------------------------------------------------------------------
 def read_patch_ID_map(file, map, NODATA_value, static_elements, four_neighbours):
@@ -448,7 +448,7 @@ def read_patch_ID_map(file, map, NODATA_value, static_elements, four_neighbours)
 							  
 	return patches, genom.tolist() 
 
-#-------------------------------------------------------------------------------------  
+#-------------------------------------------------------------------------------------	
 #	Check that original map and transition matrix are correct
 #-------------------------------------------------------------------------------------
 def check_matrices(map, trans_matrix):
@@ -517,7 +517,7 @@ def check_matrices(map, trans_matrix):
 		raise SystemError("Error: Elements of the original map are 0. No data should be < -1 and  land use classes > 0. Please check.")
 		req.close_window 
 				
-#-------------------------------------------------------------------------------------  
+#-------------------------------------------------------------------------------------	
 #	Determine all classes which are excluded from optimization 
 #-------------------------------------------------------------------------------------
 def determine_static_classes(trans_matrix, max_range):
@@ -619,7 +619,7 @@ def read_HRUs(file_HRU):
 			
 	return genom
 
-#-------------------------------------------------------------------------------------  
+#-------------------------------------------------------------------------------------	
 #	Generate the genome of the start individual
 #-------------------------------------------------------------------------------------
 def generate_genom(max_range, file_HRU, map_file, trans_file, patchIDmap_file, four_neighbours):
@@ -797,7 +797,7 @@ def generate_genom(max_range, file_HRU, map_file, trans_file, patchIDmap_file, f
   
 	return genom, nonstatic_elements
 
-#------------------------------------------------------------------------------  
+#------------------------------------------------------------------------------	 
 #	Check if new_cand is element of the tabu memory
 #------------------------------------------------------------------------------
 def check_impossible_candidates(new_cand):
@@ -832,7 +832,7 @@ def check_impossible_candidates(new_cand):
 
 	return return_value
 
-#------------------------------------------------------------------------------  
+#------------------------------------------------------------------------------	 
 #	Check if created individual is plausible
 #------------------------------------------------------------------------------
 def individual_filter(new_cand):
@@ -871,7 +871,7 @@ def individual_filter(new_cand):
 	# check if total area constraints are satisfied
 	if cfg.mapConfig.file_difference != 'None':
 		for i in np.unique(new_cand):
-			sum_new = 0	
+			sum_new = 0 
 			for m in np.nonzero(new_cand==i)[0]:
 				# index m+1 because of the exclusion of patch ID 0 from optimization
 				sum_new += map_proportion[m+1]
@@ -888,7 +888,7 @@ def individual_filter(new_cand):
 		
 	return return_value
 
-#------------------------------------------------------------------------------  
+#------------------------------------------------------------------------------	 
 #	Determine possible land use classes for next new_cand element
 #------------------------------------------------------------------------------
 def determine_possible_elements(possible_land_use, new_cand):
@@ -906,7 +906,7 @@ def determine_possible_elements(possible_land_use, new_cand):
 	global impossible_cand
 
 	copy_poss_el = np.copy(possible_land_use)
-	copy_new_cand = new_cand[:]	
+	copy_new_cand = new_cand[:] 
 	# create all new candidate parts which can be created with one of the possible_elements and the new_cand
 	# and check if the new one is excluded by the tabu memory
 	for element in possible_land_use:
@@ -919,7 +919,7 @@ def determine_possible_elements(possible_land_use, new_cand):
 	
 	return copy_poss_el
 
-#------------------------------------------------------------------------------  
+#------------------------------------------------------------------------------	 
 #	Determine possible land use classes for next new_cand element
 #------------------------------------------------------------------------------
 def determine_possible_landuse(possible_land_use, index, new_cand):
@@ -938,7 +938,7 @@ def determine_possible_landuse(possible_land_use, index, new_cand):
 	global impossible_cand
 
 	copy_poss_el = np.copy(possible_land_use)
-	copy_new_cand = new_cand[:]	
+	copy_new_cand = new_cand[:] 
 	# create all new candidate parts which can be created with one of the possible_elements and the new_cand
 	# and check if the new one is excluded by the tabu memory
 	for element in possible_land_use:
@@ -949,7 +949,7 @@ def determine_possible_landuse(possible_land_use, index, new_cand):
 	return copy_poss_el
 
 
-#------------------------------------------------------------------------------  
+#------------------------------------------------------------------------------	 
 #	Check tabu memory for redundant entries
 #------------------------------------------------------------------------------
 def check_redundancy(new_cand):
@@ -1011,10 +1011,10 @@ def check_redundancy(new_cand):
 		
 	return impossible_cand
 
-#------------------------------------------------------------------------------  
+#------------------------------------------------------------------------------	 
 #	Generate new candidate for optimization algorithm with filter function
 #------------------------------------------------------------------------------
-def filter_variator(candidate):	
+def filter_variator(candidate): 
 	"""Generate new candidates with the filter method (filter_mutation) if the given candidate 
 		was used before or the candidate is not plausible.
 		The function generates randomly new individuals and checks them for feasibility.
@@ -1047,7 +1047,7 @@ def filter_variator(candidate):
 			cand_accept = False
 			count_loops = 0 
 
-			while cand_accept == False:  
+			while cand_accept == False:	 
 
 				if count_loops % 100000 == 0:
 					WriteLogMsg("count_loops: %s" %count_loops)
@@ -1092,7 +1092,7 @@ def filter_variator(candidate):
 	#WriteLogMsg("%r" % new_cand)
 	return new_cand
 		  
-#------------------------------------------------------------------------------  
+#------------------------------------------------------------------------------	 
 #	Generate new candidate for optimization algorithm by rules based on the 
 #	transformation and min/max information
 #------------------------------------------------------------------------------
@@ -1106,7 +1106,7 @@ def logical_variator(candidate, first_generation='False'):
 			first_generation is only True for the first generation, later the new_cand 
 						will be generated without priority 
 
-	"""	
+	""" 
 
 	# original start individual derived from input data
 	global start_individual
@@ -1184,7 +1184,7 @@ def logical_variator(candidate, first_generation='False'):
 
 				# use the land use which was determined in a plausibility check before, if it is possible
 				if next_position > 0 and next_position in option_elements:
-					new_cand.append(next_position)  
+					new_cand.append(next_position)	
 				# try to use as much as possible of the candidate from the optimization algorithm
 				elif cfg.ea.priority == 'True' and first_generation == 'False' and (candidate[len(new_cand)] in option_elements):
 					new_cand.append(candidate[len(new_cand)])
@@ -1461,9 +1461,9 @@ def logical_variator(candidate, first_generation='False'):
 
 	return new_cand 
 
-#------------------------------------------------------------------------------  
+#------------------------------------------------------------------------------	 
 #	Generate first parameter for optimization algorithm
-#------------------------------------------------------------------------------  
+#------------------------------------------------------------------------------	 
 def create_extreme_seed(land_use, maximize):  
 	"""Generate new candidate with extreme land cover for given land use according to transition 
 		and total area constraints.
@@ -1472,7 +1472,7 @@ def create_extreme_seed(land_use, maximize):
 		input: 
 			land_use is the land use class for extreme land cover
 			maximize is the direction of the extreme land cover
-	"""	
+	""" 
 
 	# original start individual derived from input data
 	global start_individual
@@ -1624,7 +1624,7 @@ def create_extreme_seed(land_use, maximize):
 					(maximize == False and sum_old < min_max_diff[1][np.nonzero(min_max_diff[0] == land_use)[0][0]]):
 					# exclude indices which have been changed before 
 					# (only for increasing -> return to the last checked new_cand must be possible)
-					excluded_by_memory = []	
+					excluded_by_memory = [] 
 					for element in memory:
 						element_ones = np.nonzero(np.asarray(element) == True)[0]
 						# check only memory elements with changed_indices length +1
@@ -1894,7 +1894,7 @@ def create_extreme_seed(land_use, maximize):
 				# delete checked land use from possible land use classes if land cover should be reduced
 				if (maximize == False and sum_old > min_max_diff[1][np.nonzero(min_max_diff[0] == land_use)[0][0]]) or \
 					(maximize == True and sum_old > min_max_diff[2][np.nonzero(min_max_diff[0] == land_use)[0][0]]):
-					if land_use in option_elements:	
+					if land_use in option_elements: 
 						index = np.nonzero(option_elements == land_use)[0]
 						option_elements = np.delete(option_elements, index)
 				
@@ -2035,7 +2035,7 @@ def create_extreme_seed(land_use, maximize):
 
 	return new_cand
 		  
-#------------------------------------------------------------------------------  
+#------------------------------------------------------------------------------	 
 #	Generate first parameter for optimization algorithm
 #------------------------------------------------------------------------------
 def generate_parameter(random, args):	
@@ -2127,7 +2127,7 @@ def generate_parameter(random, args):
 			#WriteLogMsg("extreme_seeds_dict: %s" % extreme_seeds_dict)
 
 			# determine next land use category and direction of the extreme value
-			if  len(extreme_seeds_dict) != 0 and extreme_seeds_dict[max(extreme_seeds_dict.keys())][1] == False:
+			if	len(extreme_seeds_dict) != 0 and extreme_seeds_dict[max(extreme_seeds_dict.keys())][1] == False:
 				land_use = max(extreme_seeds_dict.keys())
 				maximize = True
 			elif len(extreme_seeds_dict) != len(start_land_cover) and len(start_land_cover) != 0:
@@ -2178,7 +2178,7 @@ def generate_parameter(random, args):
 		# Create individuals which takes account of the transformation information and the min/max rules
 		if first_ind != True and (cfg.mapConfig.file_transformation != 'None' or  cfg.mapConfig.file_difference != 'None'):
 			# call logical_variator if repair_mutation is selected as variator 
-			# or a feasible first population is desired	
+			# or a feasible first population is desired 
 			if 'repair_mutation' in cfg.ea.variator or cfg.ea.feasible_first_pop == 'True':
 				new_cand = logical_variator(start_individual,'True')
 
@@ -2209,7 +2209,7 @@ def generate_parameter(random, args):
 
 	return new_cand
 
-#------------------------------------------------------------------------------  
+#------------------------------------------------------------------------------	 
 #	Starts the variator function with filter method
 #------------------------------------------------------------------------------
 def generate_cand_filter(random, candidate, args):	
@@ -2230,10 +2230,10 @@ def generate_cand_filter(random, candidate, args):
 	new_cand = filter_variator(candidate)
 	return new_cand
 
-#------------------------------------------------------------------------------  
+#------------------------------------------------------------------------------	 
 #	Generate new candidate for optimization algorithm with logical function
 #------------------------------------------------------------------------------
-def generate_cand_logical(random, candidate, args):	
+def generate_cand_logical(random, candidate, args): 
 	"""Starts the logical variator for generation of a new candidate. 
 		Return one individual per call of this function.
 
@@ -2251,7 +2251,7 @@ def generate_cand_logical(random, candidate, args):
 	new_cand = logical_variator(candidate)
 	return new_cand
 
-#----------------------------------------------------------------------------------  
+#----------------------------------------------------------------------------------	 
 #	Determine the informations for penalty function of constraint_tourn_selection
 #----------------------------------------------------------------------------------
 def analyse_violation(candidate):
@@ -2354,7 +2354,7 @@ def analyse_violation(candidate):
 	
 	return violation_info
 
-#-------------------------------------------------------------------------------------  
+#-------------------------------------------------------------------------------------	
 #	Generate a tournament sampling of individuals in consideration of the constraints
 #-------------------------------------------------------------------------------------
 def constraint_tourn_selection(random, population, args):
@@ -2452,7 +2452,7 @@ def constraint_tourn_selection(random, population, args):
 
 	return selected
 
-#-------------------------------------------------------------------------------------  
+#-------------------------------------------------------------------------------------	
 #	Transfer the variables for map creation to the optiAlgorithm.py
 #-------------------------------------------------------------------------------------
 def get_from_maphandler():
@@ -2469,7 +2469,7 @@ def get_from_maphandler():
 	
 	return map, patchID_map, header_all
 
-#-------------------------------------------------------------------------------------  
+#-------------------------------------------------------------------------------------	
 #	Generate ascii-map from individual
 #-------------------------------------------------------------------------------------
 def transform_individual_ascii_map(individual, modelfolder=False, ind_number=0, map_info=None, patchID_map_info=None, header_all_info=None, feasible=True):
@@ -2481,7 +2481,7 @@ def transform_individual_ascii_map(individual, modelfolder=False, ind_number=0, 
 						  else write it in the output-folder
 			ind_number - describe in which model folder the map should be saved
 						 or if best values are saved in the output folder than 
-						 the number attributed the individual number to the map  
+						 the number attributed the individual number to the map	 
 			feasible - information for constraint_tournament_selection if individual is feasible
 	"""
 	
@@ -2513,9 +2513,9 @@ def transform_individual_ascii_map(individual, modelfolder=False, ind_number=0, 
 	# write header information and ascii_map in new ascii-file
 	WriteMap(header_all, ascii_map, modelfolder, ind_number, feasible)
   
-#------------------------------------------------------------------------------  
+#------------------------------------------------------------------------------	 
 #	Test functions
-#------------------------------------------------------------------------------	
+#------------------------------------------------------------------------------ 
 #if __name__ == "__main__":
 	#cfg.mapConfig.file_HRU == "C:/SWAT_POF/Lossa/Optimization/hru_patchID_map"
 	#max_range = 8
@@ -2524,7 +2524,7 @@ def transform_individual_ascii_map(individual, modelfolder=False, ind_number=0, 
 	#map_file = 'None'
 	#map_file = "Y:/Home/wegwitz/EclipseWorkspace/ToolCombiModels/ToolCombiModels/input/lu_saale_ganz_klein.asc"
 	#trans_file = 'None'
-	#trans_file = 'Y:/Home/wegwitz/EclipseWorkspace/ToolCombiModels/ToolCombiModels/input/transformation_info3.txt'	
+	#trans_file = 'Y:/Home/wegwitz/EclipseWorkspace/ToolCombiModels/ToolCombiModels/input/transformation_info3.txt' 
 	#file_difference = 'None'
 	#file_difference = "Y:/Home/wegwitz/EclipseWorkspace/ToolCombiModels/ToolCombiModels/input/min_max2.txt"
 	#patchIDmap_file = 'None'

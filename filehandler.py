@@ -357,8 +357,7 @@ def collect_fitness_values(opt_algorithm, number_individuals, fitness, external_
                 model_folder = 'models'
             else:
                 model_folder = 'models_%s' %i
-            subfolder_files = os.listdir(os.path.join(wrkDir, model_folder))
-            subfolder_files.sort()
+            subfolder_files = external_models
             count_real_fitness = 0
             for k in subfolder_files:
                 # check if k is a folder
