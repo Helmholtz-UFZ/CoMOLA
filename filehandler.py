@@ -292,8 +292,8 @@ def summarize_console_outputs(number_individuals, number_generation,individuals,
                 model_folder = 'models'
             else:
                 model_folder = 'models_%s' %i
-            subfolder_files = os.listdir(os.path.join(wrkDir, model_folder))
-            subfolder_files.sort()
+            subfolder_files = external_models
+            #subfolder_files.sort() victor
             for k in subfolder_files:
                 # check if k is a folder
                 if os.path.isdir(os.path.join(wrkDir, model_folder, k)):
