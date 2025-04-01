@@ -88,7 +88,10 @@ static_area = {}
 start_land_cover = {}
 # dictionary with information per land use class if extreme seeds were created before
 extreme_seeds_dict = {}
-
+global custom_index
+custom_index = 0
+global skip_transition_check 
+skip_transition_check = True
 #-------------------------------------------------------------------------------------	
 #	Start the termination of the optimization algorithm
 #-------------------------------------------------------------------------------------
@@ -622,7 +625,7 @@ def read_HRUs(file_HRU):
 #-------------------------------------------------------------------------------------	
 #	Generate the genome of the start individual
 #-------------------------------------------------------------------------------------
-def generate_genom(max_range, file_HRU, map_file, trans_file, patchIDmap_file, four_neighbours):
+def generate_genom(max_range, file_HRU, map_file, trans_file, patchIDmap_file, four_neighbours, return_only_nonstatic):
 	"""The function generates and returns the start individual and the non static land use indices
 		based on an HRU file or ASCII map.
 		It is called from generate_parameter in optiAlgorithm.py 
@@ -702,7 +705,8 @@ def generate_genom(max_range, file_HRU, map_file, trans_file, patchIDmap_file, f
 
 		# determine static land use elements
 		static_elements, nonstatic_elements = determine_static_classes(trans_matrix, max_range)
-			
+
+				
 		# possible land use options for each land use class according to transition matrix
 		if len(possible_elements) == 0:
 			for i in range(1,cfg.modelConfig.max_range+1):
@@ -733,7 +737,7 @@ def generate_genom(max_range, file_HRU, map_file, trans_file, patchIDmap_file, f
 		# determine non_static elements ( 1 <= x <= max_range)
 		for i in range(1,max_range+1):
 			nonstatic_elements.append(i)
-
+		
 	# header[5] is the NODATA_value of the original ascii map
 	# read patchID_map if it is available
 	if patchIDmap_file != 'None':
@@ -794,7 +798,10 @@ def generate_genom(max_range, file_HRU, map_file, trans_file, patchIDmap_file, f
 	start_individual = genom
 
 	WriteLogMsg("map proportion of the patches: %r" %map_proportion)
-  
+	
+	if return_only_nonstatic:
+		return nonstatic_elements
+	
 	return genom, nonstatic_elements
 
 #------------------------------------------------------------------------------	 
@@ -858,15 +865,21 @@ def individual_filter(new_cand):
 	global start_individual
 	# array for static land use types
 	global static_elements
+	global skip_transition_check
 	
 	compare_individual = start_individual
-	
-	# for each element of the individual, check if transition is allowed
-	if cfg.mapConfig.file_transformation != 'None':				
-		for i in range(0,len(new_cand)):
-			if trans_matrix[np.nonzero(np.unique(trans_matrix[:,:1]) == compare_individual[i])[0][0]][np.nonzero(trans_matrix[0] == new_cand[i])[0][0]] != 1:
-				return_value = False
-				break
+
+	i = 0
+	if cfg.ea.start_from_previous_gen == True and skip_transition_check == True and i < cfg.ea.pop_size:
+		i =i +1
+		return_value= True
+	else:
+		# for each element of the individual, check if transition is allowed
+		if cfg.mapConfig.file_transformation != 'None':				
+			for i in range(0,len(new_cand)):
+				if trans_matrix[np.nonzero(np.unique(trans_matrix[:,:1]) == compare_individual[i])[0][0]][np.nonzero(trans_matrix[0] == new_cand[i])[0][0]] != 1:
+					return_value = False
+					break
 	
 	# check if total area constraints are satisfied
 	if cfg.mapConfig.file_difference != 'None':
@@ -1190,7 +1203,7 @@ def logical_variator(candidate, first_generation='False'):
 					new_cand.append(candidate[len(new_cand)])
 				# choose randomly one of the possible land use classes for the next new_cand element
 				else: 
-					clbrValue = random.choice(option_elements)
+					clbrValue = random.choice(option_elements.tolist())
 					new_cand.append(clbrValue) 
 				# delete old priority of a land use for the next plausibility checks 
 				if next_position > -1:
@@ -2038,7 +2051,7 @@ def create_extreme_seed(land_use, maximize):
 #------------------------------------------------------------------------------	 
 #	Generate first parameter for optimization algorithm
 #------------------------------------------------------------------------------
-def generate_parameter(random, args):	
+def generate_parameter( random, args, custom_individual):	
 	"""Generates first set of candidates for algorithm. 
 		Return one population of the first set per call of this function.
 	"""
@@ -2059,6 +2072,22 @@ def generate_parameter(random, args):
 	global start_land_cover
 	# Dictionary with information per land use category if extreme seeds were created before
 	global extreme_seeds_dict
+	
+	global custom_index
+
+
+	new_cand = []
+
+	# Use custom individuals first
+	if cfg.ea.start_from_previous_gen == True and custom_index < len(custom_individual):
+		print(len(custom_individual))
+		WriteLogMsg(f"Using custom individual #{custom_index + 1}")
+		new_cand.extend(custom_individual[custom_index])
+		custom_index += 1
+		first_ind = False
+		print(f"Starting  with the individual: {new_cand}")
+		return new_cand
+
 
 	# analyse land cover of start individual for extreme seeds 
 	if cfg.ea.extreme_seeds == True and first_ind != True and len(start_land_cover) == 0:
@@ -2072,8 +2101,7 @@ def generate_parameter(random, args):
 
 		WriteLogMsg("start_land_cover: %s" % start_land_cover)
 		
-	# New candidate list 
-	new_cand = []
+	
 	# read information of min/max proportional deviation of land use types
 	if cfg.mapConfig.file_difference != 'None' and len(min_max_diff)==0:
 		WriteLogMsg("Read min/max limits ...")

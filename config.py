@@ -304,6 +304,8 @@ class EaConfig:
         self.max_repair_trials = int(dict_alg['max_repair_trials'])
         self.write_tabu_memory = strtobool(dict_alg['write_tabu_memory'])
         self.plot_results = strtobool(dict_alg['plot_results'])
+        self.start_from_previous_gen = strtobool(dict_alg['start_from_previous_gen'])
+
         
 ea = EaConfig()
 
