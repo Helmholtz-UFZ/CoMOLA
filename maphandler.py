@@ -90,8 +90,7 @@ start_land_cover = {}
 extreme_seeds_dict = {}
 global custom_index
 custom_index = 0
-global skip_transition_check 
-skip_transition_check = True
+
 #-------------------------------------------------------------------------------------	
 #	Start the termination of the optimization algorithm
 #-------------------------------------------------------------------------------------
@@ -865,12 +864,11 @@ def individual_filter(new_cand):
 	global start_individual
 	# array for static land use types
 	global static_elements
-	global skip_transition_check
 	
 	compare_individual = start_individual
 
 	i = 0
-	if cfg.ea.start_from_previous_gen == True and skip_transition_check == True and i < cfg.ea.pop_size:
+	if cfg.ea.start_from_previous_gen == True and i < cfg.ea.pop_size:
 		i =i +1
 		return_value= True
 	else:

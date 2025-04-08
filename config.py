@@ -79,6 +79,7 @@ def read_ini_file():
     dict_default_alg.update({'max_repair_trials' : '0'})
     dict_default_alg.update({'write_tabu_memory' : 'False'})
     dict_default_alg.update({'plot_results' : 'False'})
+    dict_default_alg.update({'start_from_previous_gen' : 'False'})
     dict_default_alg.update({'maximize' : 'True'})
     dict_default_alg.update({'selector' : 'default_selection'})
     dict_default_alg.update({'variator' : 'default_variation'})
